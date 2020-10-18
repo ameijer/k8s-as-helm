@@ -1,0 +1,22 @@
+apiVersion: v1
+entries:
+  pdb:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2020-10-18T19:37:32.166614619Z"
+    description: Helm Chart represeting a single PDB api object
+    digest: 1e0352c24eb8bb8b0f1eb1c78bd5c3928cd3f2ca827fc5308ea5aed506298045
+    home: https://github.com/ameijer/k8s-as-helm
+    keywords:
+    - pdb
+    - api
+    - primitives
+    - disruption
+    - poddisruptionbudget
+    - budget
+    - pod
+    name: pdb
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/pdb-0.0.9/pdb-0.0.9.tgz
+    version: 0.0.9
+generated: "2020-10-18T19:37:32.070940292Z"
