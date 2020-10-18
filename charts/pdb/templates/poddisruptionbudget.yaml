@@ -12,4 +12,6 @@ spec:
   maxAvailable: {{ .Values.maxAvailable }}
   selector:
     matchLabels:
+{{ if .Values.selector }}
       {{ toYaml .Values.selector.matchLabels | indent 7 }}
+{{ end }}
