@@ -4,7 +4,10 @@ home: https://github.com/ameijer/k8s-as-helm
 description: Helm Chart represeting a single PDB Kubernetes API object
 name: pdb
 version: 0.0.9
-
+maintainers:
+  - name: ameijer
+    url: https://github.com/ameijer
+  
 keywords:
 - pdb
 - api
