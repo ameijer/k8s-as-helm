@@ -13,5 +13,5 @@ spec:
   selector:
     matchLabels:
 {{ if .Values.selector }}
-      {{ toYaml .Values.selector.matchLabels | indent 7 }}
+{{- toYaml .Values.selector.matchLabels | indent 7 }}
 {{ end }}
