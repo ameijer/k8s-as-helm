@@ -1,0 +1,32 @@
+apiVersion: {{ template "apiVersion" . }}
+kind: PersistentVolumeClaim
+metadata:
+  {{- if .Values.annotations }}
+  annotations:
+{{ toYaml .Values.annotations | indent 4 }}
+  {{- end }}
+  labels:
+    app: {{ template "pvc.name" . }}
+    chart: {{ .Chart.Name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+ {{- if .Values.labels }}
+    {{- toYaml .Values.labels | indent 4 }}
+ {{- end }}
+  name: {{ template "pvc.name" . }}
+spec:
+{{- if .Values.accessModes }}
+  accessModes:
+{{ toYaml .Values.accessModes | indent 4 }}
+{{- end }}
+{{- if .Values.storageClassName }}
+  storageClassName: "{{ .Values.storageClassName }}"
+{{- else }}
+  storageClassName: "default"
+{{- end }}
+{{- if .Values.volumeBindingMode }}
+  volumeBindingModeName: "{{ .Values.volumeBindingMode }}"
+{{- end }}
+  resources:
+    requests:
+      storage: "{{ .Values.size }}"
