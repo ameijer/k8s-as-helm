@@ -12,7 +12,7 @@ spec:
   minAvailable: {{ .Values.minAvailable }}
 {{- end }}
 {{- if .Values.maxUnavailable }}
-  maxUnvailable: {{ .Values.maxUnavailable }}
+  maxUnavailable: {{ .Values.maxUnavailable }}
 {{- end }}
   selector:
     matchLabels:
