@@ -6,6 +6,7 @@ metadata:
       app: {{ template "pdb.name" . }}
       chart: {{ .Chart.Name }}
       release: {{ .Release.Name }}
+      heritage: {{ .Release.Service }}
 spec:
   minAvailable: {{ .Values.minAvailable }}
   maxAvailable: {{ .Values.maxAvailable }}
