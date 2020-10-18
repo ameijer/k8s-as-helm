@@ -8,8 +8,12 @@ metadata:
       release: {{ .Release.Name }}
       heritage: {{ .Release.Service }}
 spec:
+{{- if .Values.minAvailable }}
   minAvailable: {{ .Values.minAvailable }}
+{{- end }}
+{{- if .Values.maxUnavailable }}
   maxUnvailable: {{ .Values.maxUnavailable }}
+{{- end }}
   selector:
     matchLabels:
 {{ if .Values.selector }}
