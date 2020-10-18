@@ -1,9 +1,9 @@
 name: Lint and Test Charts
 
 on:
-  push:
-    paths:
-      - 'charts/**'
+  #push:
+  #  paths:
+  #    - 'charts/**'
   pull_request:
     paths:
       - 'charts/**'
