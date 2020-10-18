@@ -1,0 +1,17 @@
+apiVersion: v2
+appVersion: "v1.0.0"
+home: https://github.com/ameijer/k8s-as-helm
+description: Helm Chart represeting a single PVC (Persistent Volume Claim) Kubernetes API object
+name: pvc
+version: 1.0.0
+maintainers:
+  - name: ameijer
+    url: https://github.com/ameijer
+keywords:
+- pvc
+- api
+- primitives
+- volume
+- persistent
+- peristentvolumeclaim
+- claim
