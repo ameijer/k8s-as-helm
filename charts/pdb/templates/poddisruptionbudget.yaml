@@ -6,9 +6,16 @@ metadata:
       app: {{ template "pdb.name" . }}
       chart: {{ .Chart.Name }}
       release: {{ .Release.Name }}
+      heritage: {{ .Release.Service }}
 spec:
+{{- if .Values.minAvailable }}
   minAvailable: {{ .Values.minAvailable }}
-  maxAvailable: {{ .Values.maxAvailable }}
+{{- end }}
+{{- if .Values.maxUnavailable }}
+  maxUnavailable: {{ .Values.maxUnavailable }}
+{{- end }}
   selector:
     matchLabels:
-      {{ toYaml .Values.selector.matchLabels | indent 7 }}
+{{ if .Values.selector }}
+{{- toYaml .Values.selector.matchLabels | indent 7 }}
+{{ end }}

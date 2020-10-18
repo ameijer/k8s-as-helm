@@ -1,0 +1,6 @@
+selector:
+  matchLabels:
+    "test": "true"
+    "ci": "true"
+    "version": "test"
+maxUnavailable: 2
