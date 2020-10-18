@@ -7,7 +7,6 @@ version: 0.0.9
 maintainers:
   - name: ameijer
     url: https://github.com/ameijer
-  
 keywords:
 - pdb
 - api
