@@ -3,6 +3,27 @@ entries:
   pdb:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2020-10-18T23:45:02.1139713Z"
+    description: Helm Chart represeting a single PDB Kubernetes API object
+    digest: a4f2ed7d76edab36f5e10ae0832f0b36a1a93d8ff00f109b3df04985654f3519
+    home: https://github.com/ameijer/k8s-as-helm
+    keywords:
+    - pdb
+    - api
+    - primitives
+    - disruption
+    - poddisruptionbudget
+    - budget
+    - pod
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: pdb
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/pdb-1.0.1/pdb-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2020-10-18T21:03:12.343645912Z"
     description: Helm Chart represeting a single PDB Kubernetes API object
     digest: 7dc18954cd50588518b8c37c2d60027d60adafcac9b9a271a2ee836e937f33c0
@@ -40,4 +61,27 @@ entries:
     urls:
     - https://github.com/ameijer/k8s-as-helm/releases/download/pdb-0.0.9/pdb-0.0.9.tgz
     version: 0.0.9
+  pvc:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2020-10-18T23:45:02.195526269Z"
+    description: Helm Chart represeting a single PVC (Persistent Volume Claim) Kubernetes
+      API object
+    digest: 11a35c96eb2ed25783c54373662b5942d7a85c75eb94bb48c29be7d81fa1fa0b
+    home: https://github.com/ameijer/k8s-as-helm
+    keywords:
+    - pvc
+    - api
+    - primitives
+    - volume
+    - persistent
+    - peristentvolumeclaim
+    - claim
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: pvc
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/pvc-1.0.0/pvc-1.0.0.tgz
+    version: 1.0.0
 generated: "2020-10-18T19:37:32.070940292Z"
