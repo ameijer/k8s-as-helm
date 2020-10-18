@@ -9,7 +9,7 @@ metadata:
       heritage: {{ .Release.Service }}
 spec:
   minAvailable: {{ .Values.minAvailable }}
-  maxAvailable: {{ .Values.maxAvailable }}
+  maxUnvailable: {{ .Values.maxUnavailable }}
   selector:
     matchLabels:
 {{ if .Values.selector }}

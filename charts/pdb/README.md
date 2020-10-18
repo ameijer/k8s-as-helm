@@ -31,5 +31,5 @@ Parameter | Description | Default
 `nameOverride` | name of the chart component | .Chart.Name
 `apiVersion` | controller container image registry | `"policy/v1beta1"`
 `minAvailable` | PDB minAvailable value | refer to kubernetes documentation 
-`maxAvailable` | PDB minAvailable value | refer to kubernetes documentation 
+`maxUnavailable` | PDB maxUavailable value | refer to kubernetes documentation 
 `selector.matchLabels` | (REQUIRED) Yaml Map representation of the label keys and values to match for PDB | `null`
