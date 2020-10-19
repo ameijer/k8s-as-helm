@@ -29,7 +29,7 @@ The following table lists the configurable parameters of the nginx-ingress chart
 
 Parameter | Description | Default
 --- | --- | ---
-`nameOverride` | name of the chart component | .Chart.Name
+`nameOverride` | name of the chart component | .Release.Name
 `apiVersion` | api version of object | `"policy/v1beta1"`
 `minAvailable` | PDB minAvailable value | refer to kubernetes documentation 
 `maxUnavailable` | PDB maxUavailable value | refer to kubernetes documentation 

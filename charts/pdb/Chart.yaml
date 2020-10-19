@@ -1,9 +1,9 @@
 apiVersion: v2
 appVersion: "v1.0.0"
 home: https://github.com/ameijer/k8s-as-helm
-description: Helm Chart represeting a single PDB Kubernetes API object
+description: Helm Chart representing a single PDB (Pod Disruption Budget) Kubernetes API object
 name: pdb
-version: 1.0.1
+version: 1.0.2
 maintainers:
   - name: ameijer
     url: https://github.com/ameijer

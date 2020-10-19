@@ -29,7 +29,7 @@ The following table lists the configurable parameters of the nginx-ingress chart
 
 Parameter | Description | Default
 --- | --- | ---
-`nameOverride` | override name of the chart component | .Chart.Name
+`nameOverride` | override name of the chart component | .Release.Name
 `apiVersion` | api version of k8s object | `"policy/v1beta1"`
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to PVC object | `null`
