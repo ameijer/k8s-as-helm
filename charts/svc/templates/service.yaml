@@ -32,10 +32,10 @@ spec:
   {{- end }}
 {{- end }}
   ports:
-  {{ toYaml .Values.ports | indent 4 }} 
+{{ toYaml .Values.ports | indent 4 }} 
  {{- if .Values.selector }}
   selector:
-    {{ toYaml .Values.selector | indent 4 }}
+{{ toYaml .Values.selector | indent 4 }}
 {{- end }}
 {{- if .Values.type }}
   type: "{{ .Values.type }}"
