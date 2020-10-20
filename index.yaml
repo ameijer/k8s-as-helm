@@ -86,6 +86,28 @@ entries:
   pvc:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2020-10-20T02:08:33.396055665Z"
+    description: Helm Chart representing a single PVC (Persistent Volume Claim) Kubernetes
+      API object
+    digest: 9b86f47444783cb49f5d75eda65280083c5694ae06f19b2f3d621ba20b8ffa24
+    home: https://github.com/ameijer/k8s-as-helm
+    keywords:
+    - pvc
+    - api
+    - primitives
+    - volume
+    - persistent
+    - peristentvolumeclaim
+    - claim
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: pvc
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/pvc-1.0.2/pvc-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2020-10-19T00:13:58.817845039Z"
     description: Helm Chart representing a single PVC (Persistent Volume Claim) Kubernetes
       API object
@@ -127,5 +149,24 @@ entries:
     name: pvc
     urls:
     - https://github.com/ameijer/k8s-as-helm/releases/download/pvc-1.0.0/pvc-1.0.0.tgz
+    version: 1.0.0
+  svc:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2020-10-20T02:08:33.470751807Z"
+    description: Helm Chart representing a single SVC (Service) Kubernetes API object
+    digest: 2d8a25d226f2db43a0b5127eab4f05e8011e3141f197059e116a91be17f495b1
+    home: https://github.com/ameijer/k8s-as-helm
+    keywords:
+    - svc
+    - api
+    - primitives
+    - service
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: svc
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/svc-1.0.0/svc-1.0.0.tgz
     version: 1.0.0
 generated: "2020-10-18T19:37:32.070940292Z"
