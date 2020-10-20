@@ -38,4 +38,4 @@ Parameter | Description | Default
 `loadBalancerSourceRanges` | list of CIDRS for load balancer source ranges, if desired | `null`
 `ports` | (REQUIRED) yaml definition of a valid kubernetes service port definition list | ""
 `selector` | yaml definition of a service selector field | `null`
-`type` | type of service | `null`
+`type` | type of service | `ClusterIP`
