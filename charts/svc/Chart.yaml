@@ -1,0 +1,14 @@
+apiVersion: v2
+appVersion: "v1.0.0"
+home: https://github.com/ameijer/k8s-as-helm
+description: Helm Chart representing a single SVC (Service) Kubernetes API object
+name: svc
+version: 1.0.0
+maintainers:
+  - name: ameijer
+    url: https://github.com/ameijer
+keywords:
+- svc
+- api
+- primitives
+- service
