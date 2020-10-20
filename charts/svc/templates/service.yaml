@@ -1,0 +1,42 @@
+apiVersion: {{ template "apiVersion }}
+kind: Service
+metadata:
+{{- if .Values.annotations }}
+  annotations:
+{{ toYaml .Values.annotations | indent 4}}
+{{- end }}
+  labels:
+    app: {{ template "svc.name" . }}
+    chart: {{ .Chart.Name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- if .Values.labels }}
+{{ toYaml .Values.labels | indent 4}}
+{{- end }}
+  name: {{ template "svc.name" . }}
+spec:
+{{- if .Values.clusterIP }}
+  clusterIP: {{ .Values.clusterIP }}
+{{- end }}
+{{- if .Values.externalIPs }}
+  externalIPs:
+{{ toYaml .Values.externalIPs | indent 4 }}
+{{- end }}
+{{- if .Values.loadBalancerIP }}
+  loadBalancerIP: {{ .Values.loadBalancerIP }}
+{{- end }}
+{{- if .Values.loadBalancerSourceRanges }}
+  loadBalancerSourceRanges:
+  {{- range $cidr := .Values.loadBalancerSourceRanges }}
+    - {{ $cidr }}
+  {{- end }}
+{{- end }}
+  ports:
+  {{ toYaml .Values.ports | indent 4 }} 
+ {{- if .Values.selector }}
+  selector:
+    {{ toYaml .Values.selector | indent 4 }}
+{{ - end }}
+{{ - if .Values.type }}
+  type: "{{ .Values.type }}"
+{{ - end }} 
