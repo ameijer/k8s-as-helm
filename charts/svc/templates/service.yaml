@@ -36,7 +36,7 @@ spec:
  {{- if .Values.selector }}
   selector:
     {{ toYaml .Values.selector | indent 4 }}
-{{ - end }}
-{{ - if .Values.type }}
+{{- end }}
+{{- if .Values.type }}
   type: "{{ .Values.type }}"
-{{ - end }} 
+{{- end }} 
