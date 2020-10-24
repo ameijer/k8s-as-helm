@@ -31,6 +31,7 @@ Parameter | Description | Default
 --- | --- | ---
 `nameOverride` | name of the chart component | .Release.Name
 `apiVersion` | api version of object | `"policy/v1beta1"`
+`labels` | labels to add to PDB object | `null`
 `minAvailable` | PDB minAvailable value | refer to kubernetes documentation 
 `maxUnavailable` | PDB maxUnavailable value | refer to kubernetes documentation 
 `selector.matchLabels` | (REQUIRED) Yaml Map representation of the label keys and values to match for PDB | `null`

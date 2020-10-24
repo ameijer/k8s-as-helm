@@ -3,10 +3,13 @@ kind: PodDisruptionBudget
 metadata:
   name:  {{ template "pdb.name" . }}-pdb
   labels:
-      app: {{ template "pdb.name" . }}
-      chart: {{ .Chart.Name }}
-      release: {{ .Release.Name }}
-      heritage: {{ .Release.Service }}
+    app: {{ template "pdb.name" . }}
+    chart: {{ .Chart.Name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+ {{- if .Values.labels }}
+ {{- toYaml .Values.labels | indent 4 }}
+ {{- end }}
 spec:
 {{- if .Values.minAvailable }}
   minAvailable: {{ .Values.minAvailable }}

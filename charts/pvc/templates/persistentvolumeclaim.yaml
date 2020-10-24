@@ -11,7 +11,7 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
  {{- if .Values.labels }}
-    {{- toYaml .Values.labels | indent 4 }}
+ {{- toYaml .Values.labels | indent 4 }}
  {{- end }}
   name: {{ template "pvc.name" . }}
 spec:
