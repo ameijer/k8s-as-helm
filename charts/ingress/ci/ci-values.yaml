@@ -1,13 +1,13 @@
 labels:
   "test": "true"
-  
+
 hosts:
   - url: test.url.local
     paths:
       path: /test
       backend:
         serviceName: test-svc
-        servicePort: 443 
+        servicePort: 443
 tls:
   - hosts:
       - test.url.local
