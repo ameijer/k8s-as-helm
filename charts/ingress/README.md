@@ -1,4 +1,4 @@
-# SVC Chart
+# Ingress Chart
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/k8s-as-helm)](https://artifacthub.io/packages/search?repo=k8s-as-helm)
 
 ## TL;DR;
