@@ -1,0 +1,32 @@
+apiVersion: {{ template "apiVersion" . }}
+kind: Ingress
+metadata:
+{{- if .Values.annotations }}
+  annotations:
+{{ toYaml .Values.annotations | indent 4}}
+{{- end }}
+  labels:
+    app: {{ template "ingress.name" . }}
+    chart: {{ .Chart.Name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- if .Values.labels }}
+    labels:
+    {{ toYaml .Values.labels | indent 4 }}
+{{- end }}
+  name: {{ template "ingress.name" . }}
+spec:
+  rules:
+  {{- range .Values.hosts }}
+    - host: {{ .url }}
+      {{ .protocol | default "http"}}:
+        
+{{- if .paths }}
+        paths:
+{{ toYaml .paths | indent 10 }}
+{{- end }}
+  {{- end -}}
+{{- if .Values.tls }}
+  tls:
+{{ toYaml .Values.tls | indent 4 }}
+{{- end -}}

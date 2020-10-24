@@ -5,7 +5,7 @@
 
 ```console
 $ helm repo add k8s-as-helm https://ameijer.github.io/k8s-as-helm/
-$ helm install my-release k8s-as-helm/pvc
+$ helm install my-release k8s-as-helm/pdb
 ```
 
 ## Introduction
@@ -20,17 +20,17 @@ The PDB chart deploys a single PDB.
 
 ```console
 $ helm repo add k8s-as-helm https://ameijer.github.io/k8s-as-helm/
-$ helm install my-release k8s-as-helm/pvc
+$ helm install my-release k8s-as-helm/pdb
 ```
 
 ## Configuration
 
-The following table lists the configurable parameters of the nginx-ingress chart and their default values.
+The following table lists the configurable parameters of the pdb chart and their default values.
 
 Parameter | Description | Default
 --- | --- | ---
 `nameOverride` | name of the chart component | .Release.Name
 `apiVersion` | api version of object | `"policy/v1beta1"`
 `minAvailable` | PDB minAvailable value | refer to kubernetes documentation 
-`maxUnavailable` | PDB maxUavailable value | refer to kubernetes documentation 
+`maxUnavailable` | PDB maxUnavailable value | refer to kubernetes documentation 
 `selector.matchLabels` | (REQUIRED) Yaml Map representation of the label keys and values to match for PDB | `null`

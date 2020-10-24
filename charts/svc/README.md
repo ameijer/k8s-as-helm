@@ -25,7 +25,7 @@ $ helm install my-release k8s-as-helm/svc
 
 ## Configuration
 
-The following table lists the configurable parameters of the nginx-ingress chart and their default values.
+The following table lists the configurable parameters of the svc chart and their default values.
 
 Parameter | Description | Default
 --- | --- | ---
