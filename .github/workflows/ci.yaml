@@ -18,9 +18,9 @@ jobs:
           python-version: 3.7
       - name: Run chart-testing (lint)
         uses: helm/chart-testing-action@v2.0.0
-        with:
-          command: lint
-          config: .github/ct.yaml
+        
+      - name: Run chart-testing (lint)
+        run: ct lint
 
   kubeval-chart:
     runs-on: ubuntu-latest
