@@ -78,4 +78,4 @@ jobs:
         uses: helm/chart-testing-action@v2.0.0
         
       - name: Run chart-testing (install)
-        run: ct install
+        run: ct install --debug
