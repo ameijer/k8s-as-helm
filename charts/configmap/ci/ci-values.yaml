@@ -3,7 +3,7 @@ labels:
 
 configmapData:
   configKey: "configValue"
-  complicatedKey.yaml: 
+  complicatedKey.yaml:
     |
     block value
     with newline
