@@ -1,0 +1,16 @@
+apiVersion: v2
+appVersion: "v1.0.0"
+home: https://github.com/ameijer/k8s-as-helm
+description: Helm Chart representing a single ConfigMap Kubernetes API object
+name: configmap
+version: 1.0.0
+maintainers:
+  - name: ameijer
+    url: https://github.com/ameijer
+keywords:
+- configmap
+- cm
+- config
+- map
+- api
+- primitives
