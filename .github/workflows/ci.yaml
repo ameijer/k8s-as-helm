@@ -60,12 +60,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+        
+      - name: Set up Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: v3.4.0
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+          
       - name: Create kind ${{ matrix.k8s }} cluster
         uses: helm/kind-action@v1.0.0
         with:
           node_image: kindest/node:${{ matrix.k8s }}
       - name: Run chart-testing (install)
         uses: helm/chart-testing-action@v2.0.0
-        with:
-          command: install
-          config: .github/ct.yaml
+        
+      - name: Run chart-testing (install)
+        run: ct install
