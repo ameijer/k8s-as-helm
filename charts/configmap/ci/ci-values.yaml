@@ -1,0 +1,9 @@
+labels:
+  "test": "true"
+
+configmapData:
+  configKey: "configValue"
+  complicatedKey.yaml:
+    |
+    block value
+    with newline
