@@ -1,0 +1,4 @@
+labels:
+  "test": "true"
+
+name: ci-namespace
