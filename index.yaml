@@ -39,6 +39,25 @@ entries:
     urls:
     - https://github.com/ameijer/k8s-as-helm/releases/download/ingress-1.0.0/ingress-1.0.0.tgz
     version: 1.0.0
+  namespace:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2020-11-14T20:51:11.313289067Z"
+    description: Helm Chart representing a single Namespace Kubernetes API object
+    digest: d1a80378dbd9ac60f168272846574e778753f227e343753b7826c18dd7bedd6e
+    home: https://github.com/ameijer/k8s-as-helm
+    keywords:
+    - namespace
+    - ns
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: namespace
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/namespace-1.0.0/namespace-1.0.0.tgz
+    version: 1.0.0
   pdb:
   - apiVersion: v2
     appVersion: v1.0.0
