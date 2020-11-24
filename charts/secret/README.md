@@ -35,3 +35,4 @@ Parameter | Description | Default
 `labels` | labels to add to Secret object | `null`
 `type` | the type of the Secret object | `Opaque`
 `secretData` | Map of key/value pairs to be included in the `data` field of the secret. Values will be base64 encoded | `null`
+`secretDataEncoded` | Map of already encoded key/value pairs to be included in the `data` field of the secret. | `{}`
