@@ -255,6 +255,23 @@ entries:
   secret:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2020-11-24T18:15:47.80955543Z"
+    description: Helm Chart representing a single Secret Kubernetes API object
+    digest: 7ac9c876f06b1cd3c7485ee27c2f623c74fafbf821a1d55dccadbbf82e6ccadd
+    home: https://github.com/ameijer/k8s-as-helm
+    keywords:
+    - secret
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: secret
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/secret-1.0.2/secret-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2020-10-31T12:39:49.187479232Z"
     description: Helm Chart representing a single Secret Kubernetes API object
     digest: daa4cd46708161611cdb40dda7a3b856487ecb837195f777e0db93f8679f8806
