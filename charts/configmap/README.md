@@ -34,3 +34,4 @@ Parameter | Description | Default
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to configmap object | `null`
 `configmapData` | Map of key/value pairs to be included in the `data` field of the configmap | `null`
+`configmapBinaryData` | Map of key/value pairs to be included in the `binaryData` field of the configmap. Values should be base64 encoded. | `null`
