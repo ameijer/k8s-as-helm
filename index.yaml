@@ -3,6 +3,26 @@ entries:
   configmap:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2020-12-02T19:13:25.444411594Z"
+    description: Helm Chart representing a single ConfigMap Kubernetes API object
+    digest: 607ebe0b45bbf454216d25c54896ef8083c20bf6d13ea022d23370bbcf2aa8cf
+    home: https://github.com/ameijer/k8s-as-helm
+    keywords:
+    - configmap
+    - cm
+    - config
+    - map
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: configmap
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/configmap-1.0.1/configmap-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2020-11-09T01:48:39.858046289Z"
     description: Helm Chart representing a single ConfigMap Kubernetes API object
     digest: 79f28614c07a527887e847822787fda3a11c9f36a7865bf737b1f39cf6898cc2
