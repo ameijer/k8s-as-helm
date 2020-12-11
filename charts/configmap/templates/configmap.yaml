@@ -14,8 +14,16 @@ metadata:
 {{ toYaml .Values.labels | indent 4 }}
 {{- end }}
   name: {{ template "configmap.name" . }}
+{{- if .Values.configmapData }}
 data:
 {{-  range $configmapKey, $configmapValue := .Values.configmapData }}
   {{ $configmapKey }}:
 {{ toYaml $configmapValue | indent 4 }}
+{{- end }}
+{{- end }}
+{{- if .Values.configmapBinaryData }}
+binaryData:
+{{-  range $configmapKey, $configmapValue := .Values.configmapBinaryData }}
+  {{ $configmapKey }}: {{ $configmapValue }}
+{{- end }}
 {{- end }}
