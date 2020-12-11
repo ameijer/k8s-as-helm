@@ -1,5 +1,34 @@
 labels:
   "test": "true"
 
-secretData:
-  "mysecret.pem": "myValue123"
+ingress: false
+egress: false
+
+#egressPorts:
+#    - |
+#      - port: 53
+#        protocol: UDP
+#    - |
+#      - port: 54
+#      - port: 55
+#      to:
+#      - podSelector:
+#          matchLabels:
+#            app: test
+#            release: test
+            
+ingressPorts: 
+    - |
+      - port: 1
+      - port: 2
+      from:
+      - podSelector:
+          matchLabels:
+            app: testApp
+            release: testRelease
+      - namespaceSelector:
+          matchLabels:
+            testnamespace: "true"
+        podSelector:
+          matchLabels:
+            test: "true"
