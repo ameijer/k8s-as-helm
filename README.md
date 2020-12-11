@@ -3,9 +3,9 @@
 
 # Introduction 
 
-[Helm](https://helm.sh/) is Kubernetes' package manager. Use helm charts to quickly install software into your cluster, manage upgrades, and so forth. Helm is powerful, but sometimes users of helm charts need a bit of extra functionality that wasn't included in the original chart they obtain from a third party. Users can fork and modify the original helm chart, but this requires maintenance to keep the chart up to date with its upstream source chart. Alternatively, users can directly define using Kubernetes yaml the extra item they need, but helm itself has no way to apply single Kubernetes resources alone. If your stack relies heavily on helm, or you use tools such as (Helmfile)[https://github.com/roboll/helmfile], this can require you to implement cumbersome or hacky work arounds just to add a tiny bit of functionality to an otherwise unmodified third party chart. 
+[Helm](https://helm.sh/) is Kubernetes' package manager. Use helm charts to quickly install software into your cluster, manage upgrades, and so forth. Helm is powerful, but sometimes users of helm charts need a bit of extra functionality that wasn't included in the original chart they obtain from a third party. Users can fork and modify the original helm chart, but this requires maintenance to keep the chart up to date with its upstream source chart. Alternatively, users can directly define using Kubernetes yaml the extra item they need, but helm itself has no way to apply single Kubernetes resources alone. If your stack relies heavily on helm, or you use tools such as [Helmfile](https://github.com/roboll/helmfile), this can require you to implement cumbersome or hacky work arounds just to add a tiny bit of functionality to an otherwise unmodified third party chart. 
 
-K8s-as-helm was developed to extend Kubernetes primitives up to the helm layer. Each chart in this repository is designed to deploy a single Kubernetes API object (or, in some cases, can be configured to deploy small groups of closely related objects). Perhaps you need just one extra service to point at your Jenkins deployment, so that it can be reached by an un-configurable piece of software? Deploy a (service)[https://github.com/ameijer/k8s-as-helm/tree/master/charts/svc] chart alongside the unmodified Jenkins chart. No need to fork the chart just to add a single service spec yaml file. Maybe the implementer of a chart you are using didn't implement a pod disruption budget for its pods? Release a (pdb)[https://github.com/ameijer/k8s-as-helm/tree/master/charts/pdb] chart to add your own.
+K8s-as-helm was developed to extend Kubernetes primitives up to the helm layer. Each chart in this repository is designed to deploy a single Kubernetes API object (or, in some cases, can be configured to deploy small groups of closely related objects). Perhaps you need just one extra service to point at your Jenkins deployment, so that it can be reached by an un-configurable piece of software? Deploy a [service](https://github.com/ameijer/k8s-as-helm/tree/master/charts/svc) chart alongside the unmodified Jenkins chart. No need to fork the chart just to add a single service spec yaml file. Maybe the implementer of a chart you are using didn't implement a pod disruption budget for its pods? Release a [pdb](https://github.com/ameijer/k8s-as-helm/tree/master/charts/pdb) chart to add your own.
 
 # Design Philosophy 
 
@@ -50,7 +50,7 @@ API Object | Status | Link
 
 # Contributing
 
-Contributions are welcome! If you find an issue with a chart in here, or would like an additional feature to be added, please open an issue. PRs addressing issues are also welcomed. Check out the [Road map](#road-map) section 
+Contributions are welcome! If you find an issue with a chart in here, or would like an additional feature to be added, please open an issue. PRs addressing issues are also welcomed. Check out the [Road Map](#road-map) section 
 
 
 ### Copyright 2020 Alex Meijer
