@@ -5,30 +5,30 @@ ingress: true
 egress: true
 
 egressPorts:
-    -
-      - port: 53
-        protocol: UDP
-    -
-      - port: 54
-        to:
-         - podSelector:
-             matchLabels:
-              app: test
-              release: test
+  -
+    - port: 53
+      protocol: UDP
+  -
+    - port: 54
+      to:
+       - podSelector:
+           matchLabels:
+            app: test
+            release: test
 podSelector:
   matchLabels:
     app: testApp            
 ingressPorts: 
-    -
-      - port: 1
-        from:
-         - podSelector:
-             matchLabels:
-               app: testApp
-               release: testRelease
-         - namespaceSelector:
-             matchLabels:
-               testnamespace: "true"
-           podSelector:
-             matchLabels:
-               test: "true"
+  -
+    - port: 1
+      from:
+       - podSelector:
+           matchLabels:
+             app: testApp
+             release: testRelease
+       - namespaceSelector:
+           matchLabels:
+             testnamespace: "true"
+         podSelector:
+           matchLabels:
+             test: "true"
