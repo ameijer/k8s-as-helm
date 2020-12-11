@@ -11,24 +11,24 @@ egressPorts:
   -
     - port: 54
       to:
-       - podSelector:
-           matchLabels:
-            app: test
-            release: test
+        - podSelector:
+            matchLabels:
+              app: test
+              release: test
 podSelector:
   matchLabels:
-    app: testApp            
-ingressPorts: 
+    app: testApp
+ingressPorts:
   -
     - port: 1
       from:
-       - podSelector:
-           matchLabels:
-             app: testApp
-             release: testRelease
-       - namespaceSelector:
-           matchLabels:
-             testnamespace: "true"
-         podSelector:
-           matchLabels:
-             test: "true"
+        - podSelector:
+            matchLabels:
+              app: testApp
+              release: testRelease
+        - namespaceSelector:
+            matchLabels:
+              testnamespace: "true"
+          podSelector:
+            matchLabels:
+              test: "true"
