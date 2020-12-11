@@ -1,7 +1,7 @@
 kind: NetworkPolicy
 apiVersion: {{ template "apiVersion" . }}
 metadata:
-  name: {{ template "redis.fullname" . }}
+  name: {{ template "networkpolicy.name" . }}
 {{- if .Values.annotations }}
   annotations:
 {{ toYaml .Values.annotations | indent 4}}
@@ -15,10 +15,10 @@ metadata:
 {{ toYaml .Values.labels | indent 4 }}
 {{- end }}
 spec:
-{{ if .Values.podSelector }}
+{{- if .Values.podSelector }}
   podSelector:
     matchLabels:
-{{- toYaml .Values.podSelector.matchLabels | indent 7 }}
+{{ toYaml .Values.podSelector.matchLabels | indent 7 }}
 {{- end }}
 {{- if or .Values.ingress .Values.egress }}
   policyTypes:
@@ -32,13 +32,15 @@ spec:
 {{- if .Values.egress }}
   egress:
 {{-  range $egressPort := .Values.egressPorts }}
-    - ports:   	
+    - ports:           
 {{ toYaml $egressPort | indent 9 }}
+{{- end }}
 {{- end }}
 {{- if .Values.ingress }}
   ingress:
 {{-  range $ingressPort := .Values.ingressPorts }}
-    - ports:   	
+    - ports:           
 {{ toYaml $ingressPort | indent 9 }}
 {{- end }}
 {{- end }}
+
