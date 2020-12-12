@@ -1,9 +1,6 @@
 labels:
   "test": "true"
 
-ingress: true
-egress: true
-
 egressRules:
   - selectors: []
     ports:
