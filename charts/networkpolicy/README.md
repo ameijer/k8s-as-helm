@@ -43,4 +43,4 @@ Parameter | Description | Default
 
 ## Example Configuration
 
-For some examples of values used to configure this chart, see (ci/ci-values.yaml)
+For some examples of values used to configure this chart, see [the ci/example values for this chart](./ci/ci-values.yaml)
