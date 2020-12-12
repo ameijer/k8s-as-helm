@@ -5,7 +5,7 @@ ingress: true
 egress: true
 
 egressRules:
-  - selectors: {}
+  - selectors: []
     ports:
       - port: 2
         protocol: UDP
