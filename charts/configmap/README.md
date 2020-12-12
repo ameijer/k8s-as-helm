@@ -35,3 +35,7 @@ Parameter | Description | Default
 `labels` | labels to add to configmap object | `null`
 `configmapData` | Map of key/value pairs to be included in the `data` field of the configmap | `null`
 `configmapBinaryData` | Map of key/value pairs to be included in the `binaryData` field of the configmap. Values should be base64 encoded. | `null`
+
+## Example Configuration
+
+For some examples of values used to configure this chart, see [the ci/example values for this chart](./ci/ci-values.yaml)

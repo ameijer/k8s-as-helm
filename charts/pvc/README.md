@@ -37,3 +37,7 @@ Parameter | Description | Default
 `storageClassName` | storage class name to use to back the PVC | `default`
 `volumeBindingMode` | the volume binding mode for the PVC | `null`
 `size` | (REQUIRED) the size of the PVC | ""
+
+## Example Configuration
+
+For some examples of values used to configure this chart, see [the ci/example values for this chart](./ci/ci-values.yaml)

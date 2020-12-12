@@ -36,3 +36,7 @@ Parameter | Description | Default
 `type` | the type of the Secret object | `Opaque`
 `secretData` | Map of key/value pairs to be included in the `data` field of the secret. Values will be base64 encoded | `null`
 `secretDataEncoded` | Map of already encoded key/value pairs to be included in the `data` field of the secret. | `{}`
+
+## Example Configuration
+
+For some examples of values used to configure this chart, see [the ci/example values for this chart](./ci/ci-values.yaml)
