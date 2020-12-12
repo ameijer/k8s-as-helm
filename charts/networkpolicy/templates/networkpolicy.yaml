@@ -31,16 +31,20 @@ spec:
 {{- end }}
 {{- if .Values.egress }}
   egress:
-{{-  range $egressPort := .Values.egressPorts }}
-    - ports:           
-{{ toYaml $egressPort | indent 9 }}
+{{-  range $rule := .Values.egressRules }}
+    - to:
+{{ toYaml $rule.selectors | indent 9 }}
+      ports:
+{{ toYaml $rule.ports | indent 9 }}  
 {{- end }}
 {{- end }}
 {{- if .Values.ingress }}
   ingress:
-{{-  range $ingressPort := .Values.ingressPorts }}
-    - ports:           
-{{ toYaml $ingressPort | indent 9 }}
+{{-  range $rule := .Values.ingressRules }}
+    - from:
+{{ toYaml $rule.selectors | indent 7 }}
+      ports:
+{{ toYaml $rule.ports | indent 9 }}  
 {{- end }}
 {{- end }}
 
