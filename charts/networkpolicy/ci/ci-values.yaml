@@ -7,10 +7,10 @@ egress: true
 egressRules:
   - selectors: {}
     ports:
-    - port: 2
-      protocol: UDP
+      - port: 2
+        protocol: UDP
   - ports:
-     - port: 54
+      - port: 54
     selectors:
       - podSelector:
           matchLabels:
