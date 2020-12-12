@@ -39,3 +39,7 @@ Parameter | Description | Default
 `ports` | (REQUIRED) yaml definition of a valid kubernetes service port definition list | ""
 `selector` | yaml definition of a service selector field | `null`
 `type` | type of service | `ClusterIP`
+
+## Example Configuration
+
+For some examples of values used to configure this chart, see [the ci/example values for this chart](./ci/ci-values.yaml)

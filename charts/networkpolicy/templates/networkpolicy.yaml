@@ -1,0 +1,50 @@
+kind: NetworkPolicy
+apiVersion: {{ template "apiVersion" . }}
+metadata:
+  name: {{ template "networkpolicy.name" . }}
+{{- if .Values.annotations }}
+  annotations:
+{{ toYaml .Values.annotations | indent 4}}
+{{- end }}
+  labels:
+    app: {{ template "networkpolicy.name" . }}
+    chart: {{ .Chart.Name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- if .Values.labels }}
+{{ toYaml .Values.labels | indent 4 }}
+{{- end }}
+spec:
+{{- if .Values.podSelector }}
+  podSelector:
+    matchLabels:
+{{ toYaml .Values.podSelector.matchLabels | indent 7 }}
+{{- end }}
+{{- if or .Values.ingressRules .Values.egressRules }}
+  policyTypes:
+{{- if .Values.ingressRules }}
+    - Ingress
+{{- end }}
+{{- if .Values.egressRules }}
+    - Egress
+{{- end }}
+{{- end }}
+{{- if .Values.egressRules }}
+  egress:
+{{-  range $rule := .Values.egressRules }}
+    - to:
+{{ toYaml $rule.selectors | indent 9 }}
+      ports:
+{{ toYaml $rule.ports | indent 9 }}  
+{{- end }}
+{{- end }}
+{{- if .Values.ingressRules }}
+  ingress:
+{{-  range $rule := .Values.ingressRules }}
+    - from:
+{{ toYaml $rule.selectors | indent 7 }}
+      ports:
+{{ toYaml $rule.ports | indent 9 }}  
+{{- end }}
+{{- end }}
+

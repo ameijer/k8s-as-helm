@@ -35,3 +35,7 @@ Parameter | Description | Default
 `minAvailable` | PDB minAvailable value | refer to kubernetes documentation 
 `maxUnavailable` | PDB maxUnavailable value | refer to kubernetes documentation 
 `selector.matchLabels` | (REQUIRED) Yaml Map representation of the label keys and values to match for PDB | `null`
+
+## Example Configuration
+
+For some examples of values used to configure this chart, see [the ci/example values for this chart](./ci/ci-values.yaml)

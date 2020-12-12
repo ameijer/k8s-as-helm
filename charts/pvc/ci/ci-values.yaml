@@ -1,4 +1,4 @@
-size: 1Gi
+size: 25Mi
 accessModes:
  - ReadWriteOnce
-storageClassName: standard
+storageClassName: default

@@ -34,3 +34,7 @@ Parameter | Description | Default
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to namespace object | `null`
 `name` | (REQUIRED) Name of the namespace | `null`
+
+## Example Configuration
+
+For some examples of values used to configure this chart, see [the ci/example values for this chart](./ci/ci-values.yaml)

@@ -38,3 +38,7 @@ Parameter | Description | Default
 `hosts[].protocol` | the protocol of the host | `http`
 `hosts[].path` | the path k8s yaml object containing the contents of the `path` field for the ingress | `null`
 `tls` | the list of TLS block entries for the ingress object | `null`
+
+## Example Configuration
+
+For some examples of values used to configure this chart, see [the ci/example values for this chart](./ci/ci-values.yaml)
