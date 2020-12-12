@@ -33,5 +33,14 @@ Parameter | Description | Default
 `apiVersion` | api version of k8s object | `"v1"`
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to Network Policy object | `null`
-`type` | the type of the Network Policy object | `Opaque`
-`networkpolicyData` | Map of key/value pairs to be included in the `data` field of the networkpolicy. Values will be base64 encoded | `null`
+`podSelector.matchLabels` | Map of key/value pairs to be used to select pods with matching labels to apply Network Policy to | `null`
+`egressRules` | array of egress rules to apply to matching pods. | `[]`
+`ingressRules` | array of ingress rules to apply to matching pods. | `[]`
+`ingressRules[].selectors` | array of network policy ingress traffic selector statements | `[]`
+`ingressRules[].ports` | array of port specifications to apply the ingress rule on | `[]`
+`egressRules[].selectors` | array of network policy egress traffic selector statements | `[]`
+`egressRules[].ports` | array of port specifications to apply the egress rule on | `[]`
+
+## Example Configuration
+
+For some examples of values used to configure this chart, see (ci/ci-values.yaml)

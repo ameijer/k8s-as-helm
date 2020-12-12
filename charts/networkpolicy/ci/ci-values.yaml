@@ -19,6 +19,7 @@ egressRules:
 podSelector:
   matchLabels:
     app: testApp
+    
 ingressRules:
   - selectors:
       - podSelector:

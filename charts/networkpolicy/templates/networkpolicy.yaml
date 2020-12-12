@@ -20,16 +20,16 @@ spec:
     matchLabels:
 {{ toYaml .Values.podSelector.matchLabels | indent 7 }}
 {{- end }}
-{{- if or .Values.ingress .Values.egress }}
+{{- if or .Values.ingressRules .Values.egressRules }}
   policyTypes:
-{{- if .Values.ingress }}
+{{- if .Values.ingressRules }}
     - Ingress
 {{- end }}
-{{- if .Values.egress }}
+{{- if .Values.egressRules }}
     - Egress
 {{- end }}
 {{- end }}
-{{- if .Values.egress }}
+{{- if .Values.egressRules }}
   egress:
 {{-  range $rule := .Values.egressRules }}
     - to:
@@ -38,7 +38,7 @@ spec:
 {{ toYaml $rule.ports | indent 9 }}  
 {{- end }}
 {{- end }}
-{{- if .Values.ingress }}
+{{- if .Values.ingressRules }}
   ingress:
 {{-  range $rule := .Values.ingressRules }}
     - from:
