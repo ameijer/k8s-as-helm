@@ -76,4 +76,5 @@ jobs:
           node_image: kindest/node:${{ matrix.k8s }}
       - name: Run chart-testing (install)
         uses: helm/chart-testing-action@v2.0.0
-        run: ct install --debug
+        with:
+          args: --config .github/ct.yaml
