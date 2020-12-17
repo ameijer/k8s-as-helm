@@ -1,6 +1,8 @@
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/k8s-as-helm)](https://artifacthub.io/packages/search?repo=k8s-as-helm)
 # Kubernetes as Helm (k8s-as-helm)
 
+<img src="https://ameijer.github.io/k8s-as-helm/icon.png" width="100" height="100">
+
 ## Introduction 
 
 [Helm](https://helm.sh/) is Kubernetes' package manager. Use helm charts to quickly install software into your cluster, manage upgrades, and so forth. Helm is powerful, but sometimes users of helm charts need a bit of extra functionality that wasn't included in the original chart they obtain from a third party. Users can fork and modify the original helm chart, but this requires maintenance to keep the chart up to date with its upstream source chart. Alternatively, users can directly define using Kubernetes yaml the extra item they need, but helm itself has no way to apply single Kubernetes resources alone. If your stack relies heavily on helm, or you use tools such as [Helmfile](https://github.com/roboll/helmfile), this can require you to implement cumbersome or hacky work arounds just to add a tiny bit of functionality to an otherwise unmodified third party chart. 
