@@ -1,15 +1,16 @@
 apiVersion: v2
 appVersion: "v1.0.0"
 home: https://github.com/ameijer/k8s-as-helm
-description: Helm Chart representing a single SVC (Service) Kubernetes API object
-name: svc
-version: 1.0.3
+description: Helm Chart representing a single Network Policy Kubernetes API object
+name: networkpolicy
+version: 1.0.0
 icon: https://ameijer.github.io/k8s-as-helm/icon.png
 maintainers:
   - name: ameijer
     url: https://github.com/ameijer
 keywords:
-- svc
+- networkpolicy
+- network
+- policy
 - api
 - primitives
-- service
