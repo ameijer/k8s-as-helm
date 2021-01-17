@@ -11,7 +11,7 @@ containers:
         - -c
         - |
           echo "hello world 1" && sleep 3600
-        
+
 extraSettings:
   securityContext:
     readOnlyRootFilesystem: true
