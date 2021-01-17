@@ -23,7 +23,7 @@ Eventually, this project will maintain a helm chart for every Kubernetes API obj
 
 API Object | Status | Link
 --- | --- | ---
-`Pod` | TODO | 
+`Pod` | :heavy_check_mark: | [pod](https://github.com/ameijer/k8s-as-helm/tree/master/charts/pod)
 `ConfigMap` | :heavy_check_mark: | [configmap](https://github.com/ameijer/k8s-as-helm/tree/master/charts/configmap)
 `Ingress` | :heavy_check_mark: | [ingress](https://github.com/ameijer/k8s-as-helm/tree/master/charts/ingress)
 `PodDisruptionBudget` | :heavy_check_mark: | [pdb](https://github.com/ameijer/k8s-as-helm/tree/master/charts/pdb)
