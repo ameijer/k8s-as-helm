@@ -1,0 +1,48 @@
+kind: Pod
+apiVersion: {{ template "apiVersion" . }}
+metadata:
+  name: {{ template "pod.name" . }}
+{{- if .Values.annotations }}
+  annotations:
+{{ toYaml .Values.annotations | indent 4}}
+{{- end }}
+  labels:
+    app: {{ template "pod.name" . }}
+    chart: {{ .Chart.Name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- if .Values.labels }}
+{{ toYaml .Values.labels | indent 4 }}
+{{- end }}
+spec:
+{{- if .Values.containers}}
+  containers:
+{{- range $name, $container := .Values.containers}}
+    - name: {{ $name }}
+      image: {{ $container.image }}
+{{- if $container.extraSettings }}
+{{ toYaml $container.extraSettings | indent 6 }}
+{{- end }}
+{{- if $container.volumeMounts }}
+      volumeMounts:
+{{- range $volMountname, $volMountSettings := $container.volumeMounts }}
+        - name: {{$volMountname}}
+{{ toYaml $volMountSettings | indent 10 }}
+{{- end }}
+{{- end }}
+{{- end }}
+  dnsPolicy: {{ .Values.dnsPolicy | default "ClusterFirst" }}
+  restartPolicy: {{ .Values.restartPolicy | default "Always" }}
+  serviceAccountName: {{ .Values.saName | default "default" }}
+  terminationGracePeriodSeconds: {{ .Values.tgps | default 30 }} 
+{{- if .Values.extraSettings }}
+{{ toYaml .Values.extraSettings | indent 2 }}
+{{- end }}
+{{- if .Values.volumes }}
+  volumes:
+{{- range $name, $settings := .Values.volumes }}
+  - name: {{ $name }}
+{{ $settings | toYaml | indent 4}}
+{{- end }}
+{{- end }}
+{{- end }}

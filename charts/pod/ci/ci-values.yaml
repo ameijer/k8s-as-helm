@@ -1,31 +1,17 @@
 labels:
   "test": "true"
 
-egressRules:
-  - selectors: []
-    ports:
-      - port: 2
-        protocol: UDP
-  - ports:
-      - port: 54
-    selectors:
-      - podSelector:
-          matchLabels:
-            app: test
-            release: test
-podSelector:
-  matchLabels:
-    app: testApp
-
-ingressRules:
-  - selectors:
-      - podSelector:
-          matchLabels:
-            app: testApp
-            release: testRelease
-      - namespaceSelector:
-          matchLabels:
-            testnamespace: "true"
-    ports:
-      - protocol: TCP
-        port: 4
+containers:
+  testContainer1:
+    image: busybox
+    extraSettings:
+      imagePullPolicy: IfNotPresent
+      command: 
+        - /bin/sh
+        - -c 
+        - |
+          echo "hello world 1" && sleep 3600
+        
+extraSettings:
+  securityContext: 
+    readOnlyRootFilesystem: true

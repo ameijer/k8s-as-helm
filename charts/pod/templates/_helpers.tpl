@@ -2,7 +2,7 @@
 {{/*
 Setup a chart name
 */}}
-{{- define "networkpolicy.name" -}}
+{{- define "pod.name" -}}
 {{- default .Release.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
@@ -10,5 +10,5 @@ Setup a chart name
 Return the appropriate apiVersion for the object
 */}}
 {{- define "apiVersion" -}}
-{{- default "networking.k8s.io/v1" .Values.apiVersion -}}
+{{- default "v1" .Values.apiVersion -}}
 {{- end -}}

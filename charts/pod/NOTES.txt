@@ -1,2 +1,2 @@
 
-The Network Policy Chart {{ .Release.Name }} has been installed into your cluster!
+The Pod Chart {{ .Release.Name }} has been installed into your cluster!
