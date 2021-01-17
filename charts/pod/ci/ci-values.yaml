@@ -14,4 +14,4 @@ containers:
 
 extraSettings:
   podSecurityContext:
-    readOnlyRootFilesystem: true
+    runAsNonRoot: true
