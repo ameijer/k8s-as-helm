@@ -34,9 +34,16 @@ Parameter | Description | Default
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to Network Policy object | `null`
 `containers` | Array of container objects in the pod | `[]`
-`containers[].name` | The name of the pod container | `null`
-`containers[].image` | The image of the pod container | `null`
-`egressRules` | array of egress rules to apply to matching pods. | `[]`
+`containers[].name` | The name of the given container | `null`
+`containers[].image` | The image of the given container | `null`
+`containers[].extraSettings` | YAML representation of additional config settings for the given container | `null`
+`containers[].volumeMounts` | Map of volume mount names to settings for each given mount | `null`
+`dnsPolicy` | The pod DNS policy | `ClusterFirst`
+`restartPolicy` | The restart policy of the pod | `Always`
+`saName` | The pod service account name | `default`
+`tgps` | The pod's terminationGracePeriodSeconds setting | `30`
+`extraSettings` | Yaml representation of any additional required pod settings | `null`
+`volumes` | Mapping of volume name to volume settings for each volume mount used by the pod | `null`
 
 ## Example Configuration
 

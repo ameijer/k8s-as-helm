@@ -6,12 +6,12 @@ containers:
     image: busybox
     extraSettings:
       imagePullPolicy: IfNotPresent
-      command: 
+      command:
         - /bin/sh
-        - -c 
+        - -c
         - |
           echo "hello world 1" && sleep 3600
         
 extraSettings:
-  securityContext: 
+  securityContext:
     readOnlyRootFilesystem: true
