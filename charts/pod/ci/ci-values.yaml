@@ -2,7 +2,7 @@ labels:
   "test": "true"
 
 containers:
-  testContainer1:
+  testcontainer1:
     image: busybox
     extraSettings:
       imagePullPolicy: IfNotPresent
