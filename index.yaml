@@ -3,6 +3,27 @@ entries:
   configmap:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2021-01-17T23:30:45.30375225Z"
+    description: Helm Chart representing a single ConfigMap Kubernetes API object
+    digest: 1c21c49d1a7feed7cfbd2993c13d795cbed42ada0fd13b2cad8b674af545365c
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - configmap
+    - cm
+    - config
+    - map
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: configmap
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/configmap-1.0.3/configmap-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2020-12-12T16:01:27.100402151Z"
     description: Helm Chart representing a single ConfigMap Kubernetes API object
     digest: 62ed3c35c5faa0b5eb6bf215cb64e22473c09b6b759cb85e0bce5712d21f6037
@@ -64,6 +85,24 @@ entries:
   ingress:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2021-01-17T23:30:45.424665359Z"
+    description: Helm Chart representing a single Ingress Kubernetes API object
+    digest: 30044d6e8fdac8be6a0cfcffd42f0492faee072c937ca6dd966dbf9b428aca88
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - ingress
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: ingress
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/ingress-1.0.2/ingress-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2020-12-12T16:01:27.350324243Z"
     description: Helm Chart representing a single Ingress Kubernetes API object
     digest: 951626d7e6de08d922ed939541e61683fb27280925f113787d9c6ba952ea7549
@@ -97,6 +136,25 @@ entries:
     - https://github.com/ameijer/k8s-as-helm/releases/download/ingress-1.0.0/ingress-1.0.0.tgz
     version: 1.0.0
   namespace:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2021-01-17T23:30:45.543565115Z"
+    description: Helm Chart representing a single Namespace Kubernetes API object
+    digest: 996c90212ec0a4aa8912bd9bd34e76345644367c5f17c567a6203a3b2149fe3e
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - namespace
+    - ns
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: namespace
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/namespace-1.0.2/namespace-1.0.2.tgz
+    version: 1.0.2
   - apiVersion: v2
     appVersion: v1.0.0
     created: "2020-12-12T16:01:27.582699828Z"
@@ -136,6 +194,26 @@ entries:
   networkpolicy:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2021-01-17T23:30:45.662983584Z"
+    description: Helm Chart representing a single Network Policy Kubernetes API object
+    digest: 80ae6066a3ca74f5fb8091eb4ad6fd61aa64c338fa585314f66c7ae938c98472
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - networkpolicy
+    - network
+    - policy
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: networkpolicy
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/networkpolicy-1.0.1/networkpolicy-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2020-12-12T16:01:27.817346366Z"
     description: Helm Chart representing a single Network Policy Kubernetes API object
     digest: c1878d3c9d67447932919085828ec5c338a0ceab48fae0fb68fa768eef9b69f4
@@ -154,6 +232,29 @@ entries:
     - https://github.com/ameijer/k8s-as-helm/releases/download/networkpolicy-1.0.0/networkpolicy-1.0.0.tgz
     version: 1.0.0
   pdb:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2021-01-17T23:30:45.781361125Z"
+    description: Helm Chart representing a single PDB (Pod Disruption Budget) Kubernetes
+      API object
+    digest: db7ad7bb1ad9eadeac546a59c8777fa2432d802bf8dc6e2eb9496f9fe9a8859b
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - pdb
+    - api
+    - primitives
+    - disruption
+    - poddisruptionbudget
+    - budget
+    - pod
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: pdb
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/pdb-1.0.5/pdb-1.0.5.tgz
+    version: 1.0.5
   - apiVersion: v2
     appVersion: v1.0.0
     created: "2020-12-12T16:01:28.065642317Z"
@@ -280,7 +381,49 @@ entries:
     urls:
     - https://github.com/ameijer/k8s-as-helm/releases/download/pdb-0.0.9/pdb-0.0.9.tgz
     version: 0.0.9
+  pod:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2021-01-17T23:30:45.901761821Z"
+    description: Helm Chart representing a single Pod Kubernetes API object
+    digest: 141fe875b1ac5c89b70bdf8afb0fadc8ee70dbe88caf76f976120c7497270d02
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - pod
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: pod
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/pod-1.0.0/pod-1.0.0.tgz
+    version: 1.0.0
   pvc:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2021-01-17T23:30:46.013864894Z"
+    description: Helm Chart representing a single PVC (Persistent Volume Claim) Kubernetes
+      API object
+    digest: c97fd48c13a6080066fbb97011fada494e417d332ebcf87635d995d7ca0f6392
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - pvc
+    - api
+    - primitives
+    - volume
+    - persistent
+    - peristentvolumeclaim
+    - claim
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: pvc
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/pvc-1.0.5/pvc-1.0.5.tgz
+    version: 1.0.5
   - apiVersion: v2
     appVersion: v1.0.0
     created: "2020-12-12T16:01:28.292547852Z"
@@ -394,6 +537,24 @@ entries:
   secret:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2021-01-17T23:30:46.127530322Z"
+    description: Helm Chart representing a single Secret Kubernetes API object
+    digest: a54cdc6c68a53ff778669268c022c4efa51eabb2f289996357196e22ce644ccb
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - secret
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: secret
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/secret-1.0.4/secret-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2020-12-12T16:01:28.538527728Z"
     description: Helm Chart representing a single Secret Kubernetes API object
     digest: 3e891ffcbe7e6d4b276d603e946c66d1ad95903ee634bdbd6349ea4072a27ef4
@@ -444,6 +605,25 @@ entries:
     - https://github.com/ameijer/k8s-as-helm/releases/download/secret-1.0.1/secret-1.0.1.tgz
     version: 1.0.1
   svc:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2021-01-17T23:30:46.245729062Z"
+    description: Helm Chart representing a single SVC (Service) Kubernetes API object
+    digest: 9b5c2b4843c64100ee6f91106a03c8e8f1c80bd6e5b763a6561e39033b54fc45
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - svc
+    - api
+    - primitives
+    - service
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: svc
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/svc-1.0.3/svc-1.0.3.tgz
+    version: 1.0.3
   - apiVersion: v2
     appVersion: v1.0.0
     created: "2020-12-12T16:01:28.781191728Z"
