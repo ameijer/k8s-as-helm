@@ -13,5 +13,5 @@ containers:
           echo "hello world 1" && sleep 3600
 
 extraSettings:
-  podSecurityContext:
+  securityContext:
     runAsNonRoot: true
