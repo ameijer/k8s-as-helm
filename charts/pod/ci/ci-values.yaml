@@ -1,0 +1,18 @@
+labels:
+  "test": "true"
+
+containers:
+  testcontainer1:
+    image: busybox
+    extraSettings:
+      imagePullPolicy: IfNotPresent
+      command:
+        - /bin/sh
+        - -c
+        - |
+          echo "hello world 1" && sleep 3600
+
+extraSettings:
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1000

@@ -3,7 +3,8 @@ appVersion: "v1.0.0"
 home: https://github.com/ameijer/k8s-as-helm
 description: Helm Chart representing a single Ingress Kubernetes API object
 name: ingress
-version: 1.0.1
+version: 1.0.2
+icon: https://ameijer.github.io/k8s-as-helm/icon.png
 maintainers:
   - name: ameijer
     url: https://github.com/ameijer
