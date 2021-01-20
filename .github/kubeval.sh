@@ -1,6 +1,6 @@
 
 #!/bin/bash
-set -euxo pipefail
+set -euo pipefail
 
 CHART_DIRS="$(git diff --find-renames --name-only "$(git rev-parse --abbrev-ref HEAD)" remotes/origin/master -- charts | cut -d '/' -f 2 | uniq)"
 KUBEVAL_VERSION="0.15.0"
