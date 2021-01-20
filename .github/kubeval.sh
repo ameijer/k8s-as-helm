@@ -12,5 +12,9 @@ tar -xf /tmp/kubeval.tar.gz kubeval
 
 # validate charts
 for CHART_DIR in ${CHART_DIRS}; do
-  helm template --values charts/"${CHART_DIR}"/ci/ci-values.yaml charts/"${CHART_DIR}" | ./kubeval --strict --ignore-missing-schemas --kubernetes-version "${KUBERNETES_VERSION#v}" --schema-location "${SCHEMA_LOCATION}"
+  if [[ "$CHART_DIR" == "lib-"* ]] ; then 
+    helm template --values charts/"${CHART_DIR}"/ci/ci-values.yaml charts/"${CHART_DIR}" | ./kubeval --strict --ignore-missing-schemas --kubernetes-version "${KUBERNETES_VERSION#v}" --schema-location "${SCHEMA_LOCATION}"
+  else 
+    echo "skipping $CHART_DIR - library chart" 
+  fi
 done
