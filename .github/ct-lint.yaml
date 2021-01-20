@@ -1,0 +1,3 @@
+check-version-increment: true
+debug: true
+excluded-charts: lib-k8s-as-helm

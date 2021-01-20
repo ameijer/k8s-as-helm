@@ -1,4 +1,4 @@
 helm-extra-args: --timeout 600s
 check-version-increment: false
 debug: true
-excluded-charts: pvc,lib-k8s-as-helm
+excluded-charts: pvc
