@@ -1,18 +1,16 @@
 apiVersion: v2
-appVersion: "v1.0.0"
+appVersion: 1.0.0
 home: https://github.com/ameijer/k8s-as-helm
-description: Helm Chart representing a single Pod Kubernetes API object
-name: pod
+description: Library chart backing portions of the k8s-as-helm project
+name: lib-k8s-as-helm
 version: 1.0.0
 icon: https://ameijer.github.io/k8s-as-helm/icon.png
-dependencies:
-- name: lib-k8s-as-helm
-  version: 1.0.0
-  repository: file://../lib-k8s-as-helm
+type: library
 maintainers:
   - name: ameijer
     url: https://github.com/ameijer
 keywords:
-- pod
+- library
+- k8s-as-helm
 - api
 - primitives
