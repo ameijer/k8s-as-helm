@@ -14,35 +14,4 @@ metadata:
 {{- if .Values.labels }}
 {{ toYaml .Values.labels | indent 4 }}
 {{- end }}
-spec:
-{{- if .Values.containers}}
-  containers:
-{{- range $name, $container := .Values.containers}}
-    - name: {{ $name }}
-      image: {{ $container.image }}
-{{- if $container.extraSettings }}
-{{ toYaml $container.extraSettings | indent 6 }}
-{{- end }}
-{{- if $container.volumeMounts }}
-      volumeMounts:
-{{- range $volMountname, $volMountSettings := $container.volumeMounts }}
-        - name: {{$volMountname}}
-{{ toYaml $volMountSettings | indent 10 }}
-{{- end }}
-{{- end }}
-{{- end }}
-  dnsPolicy: {{ .Values.dnsPolicy | default "ClusterFirst" }}
-  restartPolicy: {{ .Values.restartPolicy | default "Always" }}
-  serviceAccountName: {{ .Values.saName | default "default" }}
-  terminationGracePeriodSeconds: {{ .Values.tgps | default 30 }} 
-{{- if .Values.extraSettings }}
-{{ toYaml .Values.extraSettings | indent 2 }}
-{{- end }}
-{{- if .Values.volumes }}
-  volumes:
-{{- range $name, $settings := .Values.volumes }}
-  - name: {{ $name }}
-{{ $settings | toYaml | indent 4}}
-{{- end }}
-{{- end }}
-{{- end }}
+{{ tpl ( include "k8s-as-helm-lib.pod.tpl" . ) . }}

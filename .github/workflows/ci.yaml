@@ -20,7 +20,7 @@ jobs:
         uses: helm/chart-testing-action@v2.0.0
         
       - name: Run chart-testing (lint)
-        run: ct lint
+        run: ct lint --config .github/ct-lint.yaml
 
   kubeval-chart:
     runs-on: ubuntu-latest
@@ -77,4 +77,4 @@ jobs:
       - name: Install Chart Testing
         uses: helm/chart-testing-action@v2.0.0
       - name: Run chart-testing
-        run: ct install --config .github/ct.yaml --debug
+        run: ct install --config .github/ct.yaml
