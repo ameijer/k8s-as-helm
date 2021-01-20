@@ -135,6 +135,27 @@ entries:
     urls:
     - https://github.com/ameijer/k8s-as-helm/releases/download/ingress-1.0.0/ingress-1.0.0.tgz
     version: 1.0.0
+  lib-k8s-as-helm:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-01-20T01:14:23.479829638Z"
+    description: Library chart backing portions of the k8s-as-helm project
+    digest: 7fc0ed83a946f2d678e662caefbf7035c10d1afff7a55528ee584749a2a7626d
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - library
+    - k8s-as-helm
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: lib-k8s-as-helm
+    type: library
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/lib-k8s-as-helm-1.0.0/lib-k8s-as-helm-1.0.0.tgz
+    version: 1.0.0
   namespace:
   - apiVersion: v2
     appVersion: v1.0.0
@@ -382,6 +403,28 @@ entries:
     - https://github.com/ameijer/k8s-as-helm/releases/download/pdb-0.0.9/pdb-0.0.9.tgz
     version: 0.0.9
   pod:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2021-01-20T01:14:23.697510101Z"
+    dependencies:
+    - name: lib-k8s-as-helm
+      repository: file://../lib-k8s-as-helm
+      version: 1.0.0
+    description: Helm Chart representing a single Pod Kubernetes API object
+    digest: 18104e6390fdef2e3b9e1678823832ea162f0fb42eb87cab6191ea54124ba195
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - pod
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: pod
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/pod-1.0.1/pod-1.0.1.tgz
+    version: 1.0.1
   - apiVersion: v2
     appVersion: v1.0.0
     created: "2021-01-17T23:30:45.901761821Z"
