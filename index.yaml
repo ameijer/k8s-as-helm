@@ -138,6 +138,26 @@ entries:
   lib-k8s-as-helm:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2021-01-30T20:36:30.695420528Z"
+    description: Library chart backing portions of the k8s-as-helm project
+    digest: a7794303b77a03ce69ceef4ca3e812c1bb7217fee05ae324be35db2677e343f0
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - library
+    - k8s-as-helm
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: lib-k8s-as-helm
+    type: library
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/lib-k8s-as-helm-1.0.1/lib-k8s-as-helm-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2021-01-20T01:14:23.479829638Z"
     description: Library chart backing portions of the k8s-as-helm project
     digest: 7fc0ed83a946f2d678e662caefbf7035c10d1afff7a55528ee584749a2a7626d
@@ -647,6 +667,28 @@ entries:
     urls:
     - https://github.com/ameijer/k8s-as-helm/releases/download/secret-1.0.1/secret-1.0.1.tgz
     version: 1.0.1
+  serviceaccount:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2021-01-30T20:36:30.884585686Z"
+    description: Helm Chart representing a single Service Account Kubernetes API object
+    digest: 8c2da26311629abc448f87c798596a00357c5f3da6581bc0ccbf6075fc08994c
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - serviceaccount
+    - service
+    - account
+    - rbac
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: serviceaccount
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/serviceaccount-1.0.0/serviceaccount-1.0.0.tgz
+    version: 1.0.0
   svc:
   - apiVersion: v2
     appVersion: v1.0.0
