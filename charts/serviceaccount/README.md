@@ -33,7 +33,8 @@ Parameter | Description | Default
 `apiVersion` | api version of k8s object | `"v1"`
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to Network Policy object | `null`
-
+`automountToken` | boolean setting governing whether the serviceaccount mounts its token in the pod | `true`
+`imagePullSecrets` | array of image pull secret names to attach to the serviceAccount | `[]`
 
 ## Example Configuration
 

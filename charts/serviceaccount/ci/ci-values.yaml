@@ -1,3 +1,7 @@
 labels:
   "test": "true"
 
+automountToken: false
+
+imagePullSecrets:
+  - testImagePullSecret
