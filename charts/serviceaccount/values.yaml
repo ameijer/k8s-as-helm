@@ -1,0 +1,2 @@
+automountToken: true
+imagePullSecrets: []

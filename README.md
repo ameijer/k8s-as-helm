@@ -47,7 +47,7 @@ API Object | Status | Link
 `PersistentVolumeClaim` | :heavy_check_mark: | [pvc](https://github.com/ameijer/k8s-as-helm/tree/master/charts/pvc)
 `Role` | TODO |
 `RoleBinding` | TODO |
-`ServiceAccount` | TODO |
+`ServiceAccount` | :heavy_check_mark: | [serviceaccount](https://github.com/ameijer/k8s-as-helm/tree/master/charts/serviceaccount)
 `NetworkPolicy` | :heavy_check_mark: | [networkpolicy](https://github.com/ameijer/k8s-as-helm/tree/master/charts/networkpolicy)
 
 ## Contributing
