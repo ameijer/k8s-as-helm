@@ -10,5 +10,5 @@ Setup a chart name
 Return the appropriate apiVersion for the object
 */}}
 {{- define "apiVersion" -}}
-{{- default "v1" .Values.apiVersion -}}
+{{- default "storage.k8s.io/v1" .Values.apiVersion -}}
 {{- end -}}
