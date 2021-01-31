@@ -36,7 +36,7 @@ API Object | Status | Link
 `CronJob` | TODO |
 `Deployment` | TODO |
 `DaemonSet` | TODO |
-`StorageClass` | TODO |
+`StorageClass` | :heavy_check_mark: | [storageclass](https://github.com/ameijer/k8s-as-helm/tree/master/charts/storageclass)
 `Volume` | TODO |
 `HoirizontalPodAutoscaler` | TODO |
 `PodSecurityPolicy` | TODO |
