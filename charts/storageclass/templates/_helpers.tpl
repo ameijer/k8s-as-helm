@@ -2,7 +2,7 @@
 {{/*
 Setup a chart name
 */}}
-{{- define "serviceaccount.name" -}}
+{{- define "storageclass.name" -}}
 {{- default .Release.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 

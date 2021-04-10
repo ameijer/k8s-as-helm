@@ -1,2 +1,1 @@
-automountToken: true
-imagePullSecrets: []
+bindingMode: WaitForFirstConsumer

@@ -5,7 +5,7 @@
 
 ```console
 $ helm repo add k8s-as-helm https://ameijer.github.io/k8s-as-helm/
-$ helm install my-release k8s-as-helm/serviceaccount
+$ helm install my-release k8s-as-helm/storageclass
 ```
 
 ## Introduction
@@ -14,18 +14,18 @@ Helm charts are great! They are really configurable and let you build complicate
 
 Let's say, though, you want to add additional code to a third party helm chart. You could make a new chart with your K8s API resource and the third party chart as a dependency, but that requires maintenance which might not be worth it if you only needed a single additional resource created. That's where k8s-as-helm charts come in. These charts wrap a single Kubernetes resource in a helm chart with all the key parameters exposed. 
 
-The serviceaccount chart deploys a single Kubernetes Service Account object.
+The storageclass chart deploys a single Kubernetes [Storage Class](https://kubernetes.io/docs/concepts/storage/storage-classes/) object.
 
 ## Installation 
 
 ```console
 $ helm repo add k8s-as-helm https://ameijer.github.io/k8s-as-helm/
-$ helm install my-release k8s-as-helm/serviceaccount
+$ helm install my-release k8s-as-helm/storageclass
 ```
 
 ## Configuration
 
-The following table lists the configurable parameters of the serviceaccount chart and their default values.
+The following table lists the configurable parameters of the storageclass chart and their default values.
 
 Parameter | Description | Default
 --- | --- | ---
@@ -33,8 +33,8 @@ Parameter | Description | Default
 `apiVersion` | api version of k8s object | `"v1"`
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to Network Policy object | `null`
-`automountToken` | boolean setting governing whether the serviceaccount mounts its token in the pod | `true`
-`imagePullSecrets` | array of image pull secret names to attach to the serviceAccount | `[]`
+`automountToken` | boolean setting governing whether the storageclass mounts its token in the pod | `true`
+`imagePullSecrets` | array of image pull secret names to attach to the storageclass | `[]`
 
 ## Example Configuration
 

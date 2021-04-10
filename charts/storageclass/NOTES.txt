@@ -1,2 +1,2 @@
 
-The Service Account Chart {{ .Release.Name }} has been installed into your cluster!
+The Storage Class Chart {{ .Release.Name }} has been installed into your cluster!

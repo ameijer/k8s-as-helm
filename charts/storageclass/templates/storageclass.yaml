@@ -9,25 +9,28 @@ metadata:
 {{- if .Values.labels }}
 {{ toYaml .Values.labels | indent 4 }}
 {{- end }}
-  name: {{ .Values.storageClass.name }}
-{{- if .Values.annotations }}
+  name: {{ template "storageclass.name" . }}
+{{- if or .Values.annotations .Values.defaultClas }}
   annotations:
 {{ toYaml .Values.annotations | indent 4}}
 {{- end }}
-{{- if .Values.storageClass.defaultClass }}
-  annotations:
+{{- if .Values.defaultClass }}
     storageclass.kubernetes.io/is-default-class: "true"
 {{- end }}
-
-provisioner: {{ template "nfs-client-provisioner.provisionerName" . }}
-allowVolumeExpansion: {{ .Values.storageClass.allowVolumeExpansion }}
-reclaimPolicy: {{ .Values.storageClass.reclaimPolicy }}
+volumeBindingMode: {{ .Values.bindingMode }}
+provisioner: {{ .Values.provisioner }}
+allowVolumeExpansion: {{ .Values.allowVolumeExpansion }}
+reclaimPolicy: {{ .Values.reclaimPolicy }}
+{{- if .Values.parameters }}
 parameters:
-  archiveOnDelete: "{{ .Values.storageClass.archiveOnDelete }}"
-{{- if .Values.nfs.mountOptions }}
+{{- $key, $value := range .Values.parameters }}
+  {{ $key }}: {{ $value }}
+  {{- end }}
+{{- end }}
+
+{{- if .Values.mountOptions }}
 mountOptions:
-  {{- range .Values.nfs.mountOptions }}
+  {{- range .Values.mountOptions }}
   - {{ . }}
   {{- end }}
 {{- end }}
-{{ end -}}

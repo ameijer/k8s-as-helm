@@ -1,7 +1,6 @@
 labels:
   "test": "true"
-
-automountToken: false
-
-imagePullSecrets:
-  - testImagePullSecret
+parameters:
+  archiveOnDelete: "true"
+  
+provisioner: "local-path"
