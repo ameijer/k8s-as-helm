@@ -1,0 +1,20 @@
+{{- define "k8s-as-helm-lib.job.tpl" -}}
+spec:
+{{ if .Values.backoff }}
+  backoffLimit: {{ .Values.backoff }} 
+{{- end }}
+{{ if .Values.deadlineSec }}
+  activeDeadlineSeconds: {{ .Values.deadlineSec }}
+{{- end }}
+{{ if .Values.parallelism }}
+  parallelism:  {{ .Values.parallelism }}
+{{- end }}
+{{ if .Values.completions }}
+  completions:  {{ .Values.completions }}
+{{- end }}
+{{ if .Values.completionMode }}
+  completionMode: {{ .Values.completionMode }}
+{{- end }}
+  template:
+{{ tpl ( include "k8s-as-helm-lib.pod.tpl" . ) . | indent 4 }}
+{{- end -}}

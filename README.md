@@ -33,7 +33,7 @@ API Object | Status | Link
 `ReplicaSet` | TODO |
 `ReplicationController` | TODO |
 `StatefulSet` | TODO |
-`Job` | TODO |
+`Job` | :heavy_check_mark: | [job](https://github.com/ameijer/k8s-as-helm/tree/master/charts/job)
 `CronJob` | TODO |
 `Deployment` | TODO |
 `DaemonSet` | TODO |
