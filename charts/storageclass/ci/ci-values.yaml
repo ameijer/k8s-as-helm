@@ -2,14 +2,11 @@ labels:
   "test": "true"
 parameters:
   archiveOnDelete: "true"
-  
+
 provisioner: "local-path"
 
-annotations: 
+annotations:
   com.k8s.as.helm.annotation: "test"
-  
-parameters:
-  testParamKey: testValue
-  
+
 mountOptions:
   - test
