@@ -689,6 +689,27 @@ entries:
     urls:
     - https://github.com/ameijer/k8s-as-helm/releases/download/serviceaccount-1.0.0/serviceaccount-1.0.0.tgz
     version: 1.0.0
+  storageclass:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2021-04-24T19:32:24.807649222Z"
+    description: Helm Chart representing a single Storage Class Kubernetes API object
+    digest: 484cff22f40379570771eb39024fbeb801595786e4bc7d68fc9b415c5bec69aa
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - storageclass
+    - storage
+    - class
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: storageclass
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/storageclass-1.0.0/storageclass-1.0.0.tgz
+    version: 1.0.0
   svc:
   - apiVersion: v2
     appVersion: v1.0.0
