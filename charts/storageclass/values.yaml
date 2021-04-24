@@ -1,1 +1,4 @@
 bindingMode: WaitForFirstConsumer
+defaultClass: true
+allowVolumeExpansion: true
+reclaimPolicy: Delete

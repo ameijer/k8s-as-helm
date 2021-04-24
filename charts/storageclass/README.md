@@ -1,4 +1,4 @@
-# Service Account Chart
+# Storage Class Chart
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/k8s-as-helm)](https://artifacthub.io/packages/search?repo=k8s-as-helm)
 
 ## TL;DR;
@@ -32,9 +32,14 @@ Parameter | Description | Default
 `nameOverride` | override name of the chart component | .Release.Name
 `apiVersion` | api version of k8s object | `"v1"`
 `annotations` | annotations in yaml map format to be added to the object | `null`
-`labels` | labels to add to Network Policy object | `null`
-`automountToken` | boolean setting governing whether the storageclass mounts its token in the pod | `true`
-`imagePullSecrets` | array of image pull secret names to attach to the storageclass | `[]`
+`labels` | labels to add to Storage Class object | `null`
+`defaultClass` | boolean to set annotation designating this object as the default storage class | `true`
+`bindingMode` | the binding mode for PVCs using this storage class | `WaitForFirstConsumer`
+`provisioner` | (REQUIRED) the provisioner to use for this class | ""
+`allowVolumeExpansion` | allow expansion of PVCs using this storage class | true
+`reclaimPolicy` | configures the retention of the PVC when dynamically created using this class | `Delete`
+`parameters` | storage class parameters used for volumes created with this storage class | `null`
+`mountOptions` | options used by volumes created by this storage class | `null`
 
 ## Example Configuration
 

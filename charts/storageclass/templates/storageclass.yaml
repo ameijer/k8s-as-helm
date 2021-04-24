@@ -10,7 +10,7 @@ metadata:
 {{ toYaml .Values.labels | indent 4 }}
 {{- end }}
   name: {{ template "storageclass.name" . }}
-{{- if or .Values.annotations .Values.defaultClas }}
+{{- if or .Values.annotations .Values.defaultClass }}
   annotations:
 {{ toYaml .Values.annotations | indent 4}}
 {{- end }}
@@ -23,7 +23,7 @@ allowVolumeExpansion: {{ .Values.allowVolumeExpansion }}
 reclaimPolicy: {{ .Values.reclaimPolicy }}
 {{- if .Values.parameters }}
 parameters:
-{{- $key, $value := range .Values.parameters }}
+{{- range $key, $value := .Values.parameters }}
   {{ $key }}: {{ $value }}
   {{- end }}
 {{- end }}

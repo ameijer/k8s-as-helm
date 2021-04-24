@@ -1,4 +1,5 @@
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/k8s-as-helm)](https://artifacthub.io/packages/search?repo=k8s-as-helm)
+[![Lint and Test Charts](https://github.com/ameijer/k8s-as-helm/actions/workflows/ci.yaml/badge.svg)](https://github.com/ameijer/k8s-as-helm/actions/workflows/ci.yaml)
 # Kubernetes as Helm (k8s-as-helm)
 
 <img src="https://ameijer.github.io/k8s-as-helm/icon.png" width="100" height="100">
