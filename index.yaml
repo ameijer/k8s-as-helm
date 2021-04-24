@@ -135,7 +135,50 @@ entries:
     urls:
     - https://github.com/ameijer/k8s-as-helm/releases/download/ingress-1.0.0/ingress-1.0.0.tgz
     version: 1.0.0
+  job:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2021-04-24T21:58:30.206439396Z"
+    dependencies:
+    - name: lib-k8s-as-helm
+      repository: file://../lib-k8s-as-helm
+      version: 1.1.0
+    description: Helm Chart representing a single Job Kubernetes API object
+    digest: a0ae9814f9fee77a9d496559350f97d40066d751491f41814d6d0b5c87458011
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - job
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: job
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/job-1.0.0/job-1.0.0.tgz
+    version: 1.0.0
   lib-k8s-as-helm:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-04-24T21:58:30.273710873Z"
+    description: Library chart backing portions of the k8s-as-helm project
+    digest: 9e9f896b7a57576498f7c17fc9e835df015b867d95eaa7b8e1b9773d72b41ac9
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - library
+    - k8s-as-helm
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: lib-k8s-as-helm
+    type: library
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/lib-k8s-as-helm-1.1.0/lib-k8s-as-helm-1.1.0.tgz
+    version: 1.1.0
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2021-01-30T20:36:30.695420528Z"
