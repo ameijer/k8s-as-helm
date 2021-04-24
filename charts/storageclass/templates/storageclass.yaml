@@ -1,0 +1,36 @@
+apiVersion: {{ template "apiVersion" }}
+kind: StorageClass
+metadata:
+  labels:
+    app: {{ template "storageclass.name" . }}
+    chart: {{ .Chart.Name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- if .Values.labels }}
+{{ toYaml .Values.labels | indent 4 }}
+{{- end }}
+  name: {{ template "storageclass.name" . }}
+{{- if or .Values.annotations .Values.defaultClass }}
+  annotations:
+{{ toYaml .Values.annotations | indent 4}}
+{{- end }}
+{{- if .Values.defaultClass }}
+    storageclass.kubernetes.io/is-default-class: "true"
+{{- end }}
+volumeBindingMode: {{ .Values.bindingMode }}
+provisioner: {{ .Values.provisioner }}
+allowVolumeExpansion: {{ .Values.allowVolumeExpansion }}
+reclaimPolicy: {{ .Values.reclaimPolicy }}
+{{- if .Values.parameters }}
+parameters:
+{{- range $key, $value := .Values.parameters }}
+  {{ $key }}: {{ $value }}
+  {{- end }}
+{{- end }}
+
+{{- if .Values.mountOptions }}
+mountOptions:
+  {{- range .Values.mountOptions }}
+  - {{ . }}
+  {{- end }}
+{{- end }}

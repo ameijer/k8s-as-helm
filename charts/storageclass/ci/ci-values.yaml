@@ -1,0 +1,12 @@
+labels:
+  "test": "true"
+parameters:
+  testParam: "testVal"
+
+provisioner: "local-path"
+
+annotations:
+  com.k8s.as.helm.annotation: "test"
+
+mountOptions:
+  - test
