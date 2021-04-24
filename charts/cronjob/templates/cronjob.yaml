@@ -1,0 +1,20 @@
+kind: CronJob
+apiVersion: {{ template "apiVersion" . }}
+metadata:
+  name: {{ template "cronjob.name" . }}
+{{- if .Values.annotations }}
+  annotations:
+{{ toYaml .Values.annotations | indent 4}}
+{{- end }}
+  labels:
+    app: {{ template "cronjob.name" . }}
+    chart: {{ .Chart.Name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- if .Values.labels }}
+{{ toYaml .Values.labels | indent 4 }}
+{{- end }}
+spec:  
+  schedule: {{ .Values.schedule | quote }}
+  jobTemplate:
+{{ tpl ( include "k8s-as-helm-lib.job.tpl" . ) . | indent 4 }}

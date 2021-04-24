@@ -1,0 +1,20 @@
+apiVersion: v2
+appVersion: "v1.0.0"
+home: https://github.com/ameijer/k8s-as-helm
+description: Helm Chart representing a single CronJob Kubernetes API object
+name: cronjob
+version: 1.0.0
+icon: https://ameijer.github.io/k8s-as-helm/icon.png
+dependencies:
+- name: lib-k8s-as-helm
+  version: 1.1.0
+  repository: file://../lib-k8s-as-helm
+maintainers:
+  - name: ameijer
+    url: https://github.com/ameijer
+keywords:
+- cronjob
+- cron
+- job
+- api
+- primitives
