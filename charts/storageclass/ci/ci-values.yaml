@@ -1,7 +1,7 @@
 labels:
   "test": "true"
 parameters:
-  archiveOnDelete: "true"
+  testParam: "testVal"
 
 provisioner: "local-path"
 
