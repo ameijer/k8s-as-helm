@@ -34,7 +34,7 @@ API Object | Status | Link
 `ReplicationController` | TODO |
 `StatefulSet` | TODO |
 `Job` | :heavy_check_mark: | [job](https://github.com/ameijer/k8s-as-helm/tree/master/charts/job)
-`CronJob` | TODO |
+`CronJob` | :heavy_check_mark: | [cronjob](https://github.com/ameijer/k8s-as-helm/tree/master/charts/cronjob)
 `Deployment` | TODO |
 `DaemonSet` | TODO |
 `StorageClass` | :heavy_check_mark: | [storageclass](https://github.com/ameijer/k8s-as-helm/tree/master/charts/storageclass)
