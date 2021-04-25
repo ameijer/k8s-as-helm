@@ -82,6 +82,31 @@ entries:
     urls:
     - https://github.com/ameijer/k8s-as-helm/releases/download/configmap-1.0.0/configmap-1.0.0.tgz
     version: 1.0.0
+  cronjob:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2021-04-25T19:47:32.878448189Z"
+    dependencies:
+    - name: lib-k8s-as-helm
+      repository: file://../lib-k8s-as-helm
+      version: 1.1.0
+    description: Helm Chart representing a single CronJob Kubernetes API object
+    digest: 4a9fbe20b343fece33a913232a1a4df6c24064abd81db5773f136c921f3a38d3
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - cronjob
+    - cron
+    - job
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: cronjob
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/cronjob-1.0.0/cronjob-1.0.0.tgz
+    version: 1.0.0
   ingress:
   - apiVersion: v2
     appVersion: v1.0.0
