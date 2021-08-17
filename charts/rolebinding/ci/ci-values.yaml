@@ -1,0 +1,12 @@
+labels:
+  "test": "true"
+
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  name: foo
+  kind: Role
+
+subjects:
+  - kind: User
+    name: bar
+    apiGroup: rbac.authorization.k8s.io
