@@ -1,0 +1,14 @@
+apiVersion: v2
+appVersion: "v1.0.0"
+home: https://github.com/ameijer/k8s-as-helm
+description: Helm Chart representing a single RoleBinding Kubernetes API object
+name: rolebinding
+version: 1.0.0
+icon: https://ameijer.github.io/k8s-as-helm/icon.png
+maintainers:
+  - name: ameijer
+    url: https://github.com/ameijer
+keywords:
+- rolebinding
+- api
+- primitives
