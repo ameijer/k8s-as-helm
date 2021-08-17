@@ -1,0 +1,37 @@
+apiVersion: {{ template "apiVersion" . }}
+kind: ClusterRole
+metadata:
+{{- if .Values.annotations }}
+  annotations:
+{{ toYaml .Values.annotations | indent 4}}
+{{- end }}
+  labels:
+    app: {{ template "clusterrole.name" . }}
+    chart: {{ .Chart.Name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- if .Values.labels }}
+{{ toYaml .Values.labels | indent 4 }}
+{{- end }}
+  name: {{ template "clusterrole.name" . }}
+rules:
+  {{- range .Values.rules }}
+  - verbs:
+{{ toYaml .verbs | indent 4}}
+    {{- if .apiGroups }}
+    apiGroups:
+{{ toYaml .apiGroups | indent 4}}
+    {{- end }}
+    {{- if .resources }}
+    resources:
+{{ toYaml .resources | indent 4 }}
+    {{- end }}
+    {{- if .resourceNames }}
+    resourceNames:
+{{ toYaml .resourceNames | indent 4 }}
+    {{- end }}
+    {{- if .nonResourceURLs }}
+    nonResourceURLs:
+{{ toYaml .nonResourceURLs | indent 4 }}
+    {{- end }}
+  {{- end -}}
