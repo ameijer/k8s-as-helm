@@ -42,7 +42,7 @@ API Object | Status | Link
 `HoirizontalPodAutoscaler` | TODO |
 `PodSecurityPolicy` | TODO |
 `ClusterRole` | TODO |
-`ClusterRoleBinding` | TODO |
+`ClusterRoleBinding` | :heavy_check_mark: | [clusterrole](https://github.com/ameijer/k8s-as-helm/tree/master/charts/clusterrolebinding)
 `Namespace` | :heavy_check_mark: | [namespace](https://github.com/ameijer/k8s-as-helm/tree/master/charts/namespace)
 `PeristentVolume` | TODO |
 `PersistentVolumeClaim` | :heavy_check_mark: | [pvc](https://github.com/ameijer/k8s-as-helm/tree/master/charts/pvc)
