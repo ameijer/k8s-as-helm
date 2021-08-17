@@ -1,0 +1,17 @@
+apiVersion: {{ template "apiVersion" . }}
+kind: Role
+metadata:
+{{- if .Values.annotations }}
+  annotations:
+{{ toYaml .Values.annotations | indent 4}}
+{{- end }}
+  labels:
+    app: {{ template "role.name" . }}
+    chart: {{ .Chart.Name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- if .Values.labels }}
+{{ toYaml .Values.labels | indent 4 }}
+{{- end }}
+  name: {{ template "role.name" . }}
+{{ tpl ( include "k8s-as-helm-lib.role.rule.tpl" .Values.rules) . }}
