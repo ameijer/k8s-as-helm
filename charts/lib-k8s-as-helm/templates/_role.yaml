@@ -1,0 +1,23 @@
+{{- define "k8s-as-helm-lib.role.rule.tpl" -}}
+rules:
+  {{- range . }}
+  - verbs:
+{{ toYaml .verbs | indent 4}}
+    {{- if .apiGroups }}
+    apiGroups:
+{{ toYaml .apiGroups | indent 4}}
+    {{- end }}
+    {{- if .resources }}
+    resources:
+{{ toYaml .resources | indent 4 }}
+    {{- end }}
+    {{- if .resourceNames }}
+    resourceNames:
+{{ toYaml .resourceNames | indent 4 }}
+    {{- end }}
+    {{- if .nonResourceURLs }}
+    nonResourceURLs:
+{{ toYaml .nonResourceURLs | indent 4 }}
+    {{- end }}
+  {{- end -}}
+{{- end -}}
