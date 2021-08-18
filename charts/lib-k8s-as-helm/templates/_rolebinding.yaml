@@ -1,0 +1,6 @@
+{{- define "k8s-as-helm-lib.rolebinding.roleref.tpl" -}}
+roleRef:
+  apiGroup: {{ .apiGroup }}
+  kind: {{ .kind }}
+  name: {{ .name }}
+{{- end -}}
