@@ -4,3 +4,16 @@ roleRef:
   kind: {{ .kind }}
   name: {{ .name }}
 {{- end -}}
+{{- define "k8s-as-helm-lib.rolebinding.subjects.tpl" -}}
+subjects:
+  {{- range . }}
+  - kind: {{ .kind }}
+    name: {{ .name }}
+    {{- if .apiGroup }}
+    apiGroup: {{ .apiGroup }}
+    {{- end }}
+    {{- if .namespace }}
+    namespace: {{ .namespace }}
+    {{- end }}
+  {{- end }}
+{{- end -}}
