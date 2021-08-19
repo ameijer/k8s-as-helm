@@ -1,5 +1,52 @@
 apiVersion: v1
 entries:
+  clusterrole:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2021-08-19T11:46:03.848591859Z"
+    dependencies:
+    - name: lib-k8s-as-helm
+      repository: file://../lib-k8s-as-helm
+      version: 1.2.0
+    description: Helm Chart representing a single ClusterRole Kubernetes API object
+    digest: 83960ebdd0b6ba856105976e4a946e28b0b0d57d6325bcc1fe95eb27e4e27084
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - clusterrole
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: clusterrole
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/clusterrole-1.0.0/clusterrole-1.0.0.tgz
+    version: 1.0.0
+  clusterrolebinding:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2021-08-19T11:46:03.953972099Z"
+    dependencies:
+    - name: lib-k8s-as-helm
+      repository: file://../lib-k8s-as-helm
+      version: 1.2.0
+    description: Helm Chart representing a single ClusterRoleBinding Kubernetes API
+      object
+    digest: 0373e8bc88b32065e8e75d8a2e38456400f49036b001b30cc8e529e15d657080
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - clusterrolebinding
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: clusterrolebinding
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/clusterrolebinding-1.0.0/clusterrolebinding-1.0.0.tgz
+    version: 1.0.0
   configmap:
   - apiVersion: v2
     appVersion: v1.0.0
@@ -184,6 +231,26 @@ entries:
     - https://github.com/ameijer/k8s-as-helm/releases/download/job-1.0.0/job-1.0.0.tgz
     version: 1.0.0
   lib-k8s-as-helm:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-08-19T11:46:04.058004923Z"
+    description: Library chart backing portions of the k8s-as-helm project
+    digest: 725895b829d140bbfab0a79a84195acf0711e75edfe61f3e1a852c1670cd5853
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - library
+    - k8s-as-helm
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: lib-k8s-as-helm
+    type: library
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/lib-k8s-as-helm-1.2.0/lib-k8s-as-helm-1.2.0.tgz
+    version: 1.2.0
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2021-04-24T21:58:30.273710873Z"
@@ -664,6 +731,52 @@ entries:
     name: pvc
     urls:
     - https://github.com/ameijer/k8s-as-helm/releases/download/pvc-1.0.0/pvc-1.0.0.tgz
+    version: 1.0.0
+  role:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2021-08-19T11:46:04.151643325Z"
+    dependencies:
+    - name: lib-k8s-as-helm
+      repository: file://../lib-k8s-as-helm
+      version: 1.2.0
+    description: Helm Chart representing a single Role Kubernetes API object
+    digest: 042e796638e618eac10f90b17051be6d65ed14094eb170091b0b8fc6f103a2dd
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - role
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: role
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/role-1.0.0/role-1.0.0.tgz
+    version: 1.0.0
+  rolebinding:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2021-08-19T11:46:04.235807815Z"
+    dependencies:
+    - name: lib-k8s-as-helm
+      repository: file://../lib-k8s-as-helm
+      version: 1.2.0
+    description: Helm Chart representing a single RoleBinding Kubernetes API object
+    digest: b646164b95bb6730899666f8272fcf3117fe840843d6a7de2d03e0aa150f8dee
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - rolebinding
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: rolebinding
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/rolebinding-1.0.0/rolebinding-1.0.0.tgz
     version: 1.0.0
   secret:
   - apiVersion: v2
