@@ -42,12 +42,12 @@ API Object | Status | Link
 `HoirizontalPodAutoscaler` | TODO |
 `PodSecurityPolicy` | TODO |
 `ClusterRole` | :heavy_check_mark: | [clusterrole](https://github.com/ameijer/k8s-as-helm/tree/master/charts/clusterrole)
-`ClusterRoleBinding` | :heavy_check_mark: | [clusterrole](https://github.com/ameijer/k8s-as-helm/tree/master/charts/clusterrolebinding)
+`ClusterRoleBinding` | :heavy_check_mark: | [clusterrolebinding](https://github.com/ameijer/k8s-as-helm/tree/master/charts/clusterrolebinding)
 `Namespace` | :heavy_check_mark: | [namespace](https://github.com/ameijer/k8s-as-helm/tree/master/charts/namespace)
 `PeristentVolume` | TODO |
 `PersistentVolumeClaim` | :heavy_check_mark: | [pvc](https://github.com/ameijer/k8s-as-helm/tree/master/charts/pvc)
 `Role` | :heavy_check_mark: | [role](https://github.com/ameijer/k8s-as-helm/tree/master/charts/role)
-`RoleBinding` | :heavy_check_mark: | [role](https://github.com/ameijer/k8s-as-helm/tree/master/charts/rolebinding)
+`RoleBinding` | :heavy_check_mark: | [rolebinding](https://github.com/ameijer/k8s-as-helm/tree/master/charts/rolebinding)
 `ServiceAccount` | :heavy_check_mark: | [serviceaccount](https://github.com/ameijer/k8s-as-helm/tree/master/charts/serviceaccount)
 `NetworkPolicy` | :heavy_check_mark: | [networkpolicy](https://github.com/ameijer/k8s-as-helm/tree/master/charts/networkpolicy)
 
@@ -55,5 +55,22 @@ API Object | Status | Link
 
 Contributions are welcome! If you find an issue with a chart in here, or would like an additional feature to be added, please open an issue. PRs addressing issues are also welcomed. Check out the [Road Map](#road-map) section 
 
+### Contributors
 
-### Copyright 2020 Alex Meijer
+Thanks to all the individuals who have given their time and effort towards creating and maintaining this repo:
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/chapipo"><img src="https://avatars.githubusercontent.com/u/8938901?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thomas Molines</b></sub></a><br /><a href="https://github.com/ameijer/k8s-as-helm/commits?author=chapipo" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+### Copyright 2021 Alex Meijer
