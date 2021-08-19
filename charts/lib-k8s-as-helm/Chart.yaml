@@ -3,7 +3,7 @@ appVersion: 1.0.0
 home: https://github.com/ameijer/k8s-as-helm
 description: Library chart backing portions of the k8s-as-helm project
 name: lib-k8s-as-helm
-version: 1.1.0
+version: 1.2.0
 icon: https://ameijer.github.io/k8s-as-helm/icon.png
 type: library
 maintainers:
