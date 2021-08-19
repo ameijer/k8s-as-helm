@@ -30,12 +30,11 @@ API Object | Status | Link
 `PodDisruptionBudget` | :heavy_check_mark: | [pdb](https://github.com/ameijer/k8s-as-helm/tree/master/charts/pdb)
 `Secret` | :heavy_check_mark: | [secret](https://github.com/ameijer/k8s-as-helm/tree/master/charts/secret)
 `Service` | :heavy_check_mark: | [svc](https://github.com/ameijer/k8s-as-helm/tree/master/charts/svc)
-`ReplicaSet` | TODO |
-`ReplicationController` | TODO |
+`ReplicaSet` | TODO | [replicaset](https://github.com/ameijer/k8s-as-helm/tree/master/charts/replicaset)
 `StatefulSet` | TODO |
 `Job` | :heavy_check_mark: | [job](https://github.com/ameijer/k8s-as-helm/tree/master/charts/job)
 `CronJob` | :heavy_check_mark: | [cronjob](https://github.com/ameijer/k8s-as-helm/tree/master/charts/cronjob)
-`Deployment` | TODO |
+`Deployment` | :heavy_check_mark: | [deployment](https://github.com/ameijer/k8s-as-helm/tree/master/charts/deployment)
 `DaemonSet` | TODO |
 `StorageClass` | :heavy_check_mark: | [storageclass](https://github.com/ameijer/k8s-as-helm/tree/master/charts/storageclass)
 `Volume` | TODO |
