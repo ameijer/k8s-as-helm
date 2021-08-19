@@ -1,11 +1,11 @@
-# CronJob Chart
+# Deployment Chart
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/k8s-as-helm)](https://artifacthub.io/packages/search?repo=k8s-as-helm)
 
 ## TL;DR;
 
 ```console
 $ helm repo add k8s-as-helm https://ameijer.github.io/k8s-as-helm/
-$ helm install my-release k8s-as-helm/cronjob
+$ helm install my-release k8s-as-helm/deployment
 ```
 
 ## Introduction
@@ -14,23 +14,23 @@ Helm charts are great! They are really configurable and let you build complicate
 
 Let's say, though, you want to add additional code to a third party helm chart. You could make a new chart with your K8s API resource and the third party chart as a dependency, but that requires maintenance which might not be worth it if you only needed a single additional resource created. That's where k8s-as-helm charts come in. These charts wrap a single Kubernetes resource in a helm chart with all the key parameters exposed. 
 
-The pod chart deploys a single Kubernetes CronJob object.
+The pod chart deploys a single Kubernetes Deployment object.
 
 ## Installation 
 
 ```console
 $ helm repo add k8s-as-helm https://ameijer.github.io/k8s-as-helm/
-$ helm install my-release k8s-as-helm/cronjob
+$ helm install my-release k8s-as-helm/deployment
 ```
 
 ## Configuration
 
-The following table lists the configurable parameters of the cronjob chart and their default values.
+The following table lists the configurable parameters of the deployment chart and their default values.
 
 Parameter | Description | Default
 --- | --- | ---
 `nameOverride` | override name of the chart component | .Release.Name
-`apiVersion` | api version of k8s object | `"batch/v1beta1"`
+`apiVersion` | api version of k8s object | `"apps/v1"`
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to CronJob object | `null`
 `containers` | Array of container objects in the job pods | `[]`
@@ -44,12 +44,7 @@ Parameter | Description | Default
 `tgps` | The job pods' terminationGracePeriodSeconds setting | `30`
 `extraSettings` | Yaml representation of any additional required pod settings | `null`
 `volumes` | Mapping of volume name to volume settings for each volume mount used by the job pods | `null`
-`backoffLimit` | The job's backoffLimit settings. Leave unset to use defaults | `null`
-`activeDeadlineSeconds` | The maximum time the job may take. Leave unset to use default 600 seconds | `null`
-`parallelism` | The parallelism of the pods in the job. Leave unset to use default of no parallelism | `null`
-`completions` | The number of successful pod completions for the job. Leave unset to use the default of 1 | `null`
-`completionMode` | Set to `Indexed` to pass an index to each pod. Leave unset to omit index passing.  | `null`
-`schedule` | (REQUIRED) A Cron String representing the schedule for the Cron Job | `null`
+`replicas` | The number of pod replicas to maintain | `1`
 
 ## Example Configuration
 

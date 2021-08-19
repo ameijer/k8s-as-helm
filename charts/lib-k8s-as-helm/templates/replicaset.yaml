@@ -1,0 +1,16 @@
+{{- define "k8s-as-helm-lib.replicaset.tpl" -}}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      env: prod
+    matchExpressions:
+    - { key: tier, operator: In, values: [frontend] }
+  template:
+    metadata:
+      name: nginx
+      labels: 
+        env: prod
+        tier: frontend
+{{ tpl ( include "k8s-as-helm-lib.pod.tpl" . ) . | indent 4 }}
+{{- end -}}
