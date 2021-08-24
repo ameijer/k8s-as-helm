@@ -18,9 +18,10 @@ jobs:
           python-version: 3.7
       - name: Run chart-testing (lint)
         uses: helm/chart-testing-action@v2.0.0
-        
+      - name: add k8s-as-helm repo
+        run: helm repo add k8s-as-helm https://ameijer.github.io/k8s-as-helm/
       - name: Run chart-testing (lint)
-        run: ct lint --config .github/ct-lint.yaml --all
+        run:  ct lint --config .github/ct-lint.yaml --all
 
   kubeval-chart:
     runs-on: ubuntu-latest
