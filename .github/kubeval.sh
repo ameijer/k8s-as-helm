@@ -2,7 +2,7 @@
 #!/bin/bash
 set -euo pipefail
 
-CHART_DIRS="charts"
+CHART_DIRS="$(ls charts)"
 KUBEVAL_VERSION="v0.16.1"
 SCHEMA_LOCATION="https://raw.githubusercontent.com/instrumenta/kubernetes-json-schema/master/"
 
