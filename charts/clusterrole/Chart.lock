@@ -1,6 +1,6 @@
 dependencies:
 - name: lib-k8s-as-helm
-  repository: file://../lib-k8s-as-helm
+  repository: https://ameijer.github.io/k8s-as-helm/
   version: 1.2.0
-digest: sha256:ae78831ebb0382a7f399ebb58884a3b57f8acf06d24a2dfd6ad456049ebd2af2
-generated: "2021-08-18T16:52:51.329717441+02:00"
+digest: sha256:ae0162daf1eb67f8e998ba3243b907a880ded586b6f27c3b3fdb0a089d500e9b
+generated: "2021-08-24T07:36:06.977658539-04:00"
