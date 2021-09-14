@@ -72,6 +72,8 @@ jobs:
         uses: azure/setup-helm@v1
         with:
           version: v3.4.0
+      - name: add k8s-as-helm repo
+        run: helm repo add k8s-as-helm https://ameijer.github.io/k8s-as-helm/
 
       - uses: actions/setup-python@v2
         with:
