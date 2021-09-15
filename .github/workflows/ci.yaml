@@ -49,6 +49,7 @@ jobs:
   install-chart:
     name: install-chart
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     needs:
       - lint-chart
       - kubeval-chart
