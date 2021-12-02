@@ -33,8 +33,9 @@ Parameter | Description | Default
 `apiVersion` | api version of k8s object | `"v1"`
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to PVC object | `null`
-`custerIP` | the cluster IP to set for the service, if any | `null`
+`clusterIP` | the cluster IP to set for the service, if any | `null`
 `externalIPs` | yaml representation of external IPs for service definition | `null`
+`externalName` | the external reference that discovery mechanisms will return as an alias for this service | `null`
 `loadBalancerSourceRanges` | list of CIDRS for load balancer source ranges, if desired | `null`
 `ports` | (REQUIRED) yaml definition of a valid kubernetes service port definition list | ""
 `selector` | yaml definition of a service selector field | `null`

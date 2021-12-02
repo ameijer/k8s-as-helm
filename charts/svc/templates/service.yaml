@@ -22,6 +22,9 @@ spec:
   externalIPs:
 {{ toYaml .Values.externalIPs | indent 4 }}
 {{- end }}
+{{- if .Values.externalName }}
+  externalName: {{ .Values.externalName }}
+{{- end }}
 {{- if .Values.loadBalancerIP }}
   loadBalancerIP: {{ .Values.loadBalancerIP }}
 {{- end }}
