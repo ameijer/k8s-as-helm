@@ -894,6 +894,25 @@ entries:
   svc:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2021-12-03T16:05:22.753542656Z"
+    description: Helm Chart representing a single SVC (Service) Kubernetes API object
+    digest: 96724e2a562c28f1befec6b195699befa8ab10f819057685505b1d919902a308
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - svc
+    - api
+    - primitives
+    - service
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: svc
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/svc-1.0.4/svc-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2021-01-17T23:30:46.245729062Z"
     description: Helm Chart representing a single SVC (Service) Kubernetes API object
     digest: 9b5c2b4843c64100ee6f91106a03c8e8f1c80bd6e5b763a6561e39033b54fc45
