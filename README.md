@@ -40,13 +40,13 @@ API Object | Status | Link
 `Volume` | TODO |
 `HoirizontalPodAutoscaler` | TODO |
 `PodSecurityPolicy` | TODO |
-`ClusterRole` | TODO |
-`ClusterRoleBinding` | TODO |
+`ClusterRole` | :heavy_check_mark: | [clusterrole](https://github.com/ameijer/k8s-as-helm/tree/master/charts/clusterrole)
+`ClusterRoleBinding` | :heavy_check_mark: | [clusterrole](https://github.com/ameijer/k8s-as-helm/tree/master/charts/clusterrolebinding)
 `Namespace` | :heavy_check_mark: | [namespace](https://github.com/ameijer/k8s-as-helm/tree/master/charts/namespace)
 `PeristentVolume` | TODO |
 `PersistentVolumeClaim` | :heavy_check_mark: | [pvc](https://github.com/ameijer/k8s-as-helm/tree/master/charts/pvc)
-`Role` | TODO |
-`RoleBinding` | TODO |
+`Role` | :heavy_check_mark: | [role](https://github.com/ameijer/k8s-as-helm/tree/master/charts/role)
+`RoleBinding` | :heavy_check_mark: | [role](https://github.com/ameijer/k8s-as-helm/tree/master/charts/rolebinding)
 `ServiceAccount` | :heavy_check_mark: | [serviceaccount](https://github.com/ameijer/k8s-as-helm/tree/master/charts/serviceaccount)
 `NetworkPolicy` | :heavy_check_mark: | [networkpolicy](https://github.com/ameijer/k8s-as-helm/tree/master/charts/networkpolicy)
 

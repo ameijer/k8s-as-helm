@@ -1,0 +1,7 @@
+labels:
+  "test": "true"
+
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "watch", "list"]
