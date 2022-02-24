@@ -314,6 +314,25 @@ entries:
   namespace:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2022-02-24T01:01:58.899193873Z"
+    description: Helm Chart representing a single Namespace Kubernetes API object
+    digest: 1d499d7fa6984a73d290fd680586c82e2c194ef6ae988a5a95e93b50f25efb81
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - namespace
+    - ns
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: namespace
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/namespace-1.1.0/namespace-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2021-01-17T23:30:45.543565115Z"
     description: Helm Chart representing a single Namespace Kubernetes API object
     digest: 996c90212ec0a4aa8912bd9bd34e76345644367c5f17c567a6203a3b2149fe3e
