@@ -1,4 +1,4 @@
 labels:
   "test": "true"
 
-name: ci-namespace
+nameOverride: test-namespace-override
