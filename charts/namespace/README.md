@@ -33,7 +33,6 @@ Parameter | Description | Default
 `apiVersion` | api version of k8s object | `"v1"`
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to namespace object | `null`
-`name` | (REQUIRED) Name of the namespace | `null`
 
 ## Example Configuration
 
