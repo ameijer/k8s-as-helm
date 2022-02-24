@@ -1,4 +1,4 @@
 labels:
   "test": "true"
-  
+
 nameOverride: test-namespace-override
