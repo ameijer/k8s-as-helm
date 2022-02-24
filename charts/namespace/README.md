@@ -29,7 +29,7 @@ The following table lists the configurable parameters of the namespace chart and
 
 Parameter | Description | Default
 --- | --- | ---
-`nameOverride` | override name of the chart component | .Release.Name
+`nameOverride` | override the name of the namespace component | .Release.Name
 `apiVersion` | api version of k8s object | `"v1"`
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to namespace object | `null`

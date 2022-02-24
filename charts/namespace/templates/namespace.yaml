@@ -1,7 +1,7 @@
 kind: Namespace
 apiVersion: {{ template "apiVersion" . }}
 metadata:
-  name: {{ .Values.name }}
+  name: {{ template "namespace.name" . }}
 {{- if .Values.annotations }}
   annotations:
 {{ toYaml .Values.annotations | indent 4}}
