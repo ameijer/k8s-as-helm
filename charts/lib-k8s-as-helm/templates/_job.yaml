@@ -1,5 +1,8 @@
 {{- define "k8s-as-helm-lib.job.tpl" -}}
 spec:
+{{ if .Values.ttlSecondsAfterFinished }}
+  ttlSecondsAfterFinished: {{ .Values.ttlSecondsAfterFinished }}
+{{- end }}
 {{ if .Values.backoff }}
   backoffLimit: {{ .Values.backoff }} 
 {{- end }}
@@ -16,5 +19,14 @@ spec:
   completionMode: {{ .Values.completionMode }}
 {{- end }}
   template:
+    metadata:
+{{- if .Values.podAnnotations }}
+      annotations:
+{{ toYaml .Values.podAnnotations | indent 8}}
+{{- end }}
+{{- if .Values.podLabels }}
+      labels:
+{{ toYaml .Values.podLabels | indent 8}}
+{{- end }}
 {{ tpl ( include "k8s-as-helm-lib.pod.tpl" . ) . | indent 4 }}
 {{- end -}}
