@@ -24,6 +24,6 @@ activeDeadlineSeconds: 601
 ttlSecondsAfterFinished: 60
 
 podAnnotations:
-  test: true
+  test: "true"
 podLabels:
-  test: true
+  test: "true"
