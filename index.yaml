@@ -210,6 +210,28 @@ entries:
   job:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2022-06-14T00:32:58.106603791Z"
+    dependencies:
+    - name: lib-k8s-as-helm
+      repository: file://../lib-k8s-as-helm
+      version: 1.3.0
+    description: Helm Chart representing a single Job Kubernetes API object
+    digest: b0d0708b340668ab5a258420593e2bb9e00f2212972025195d4509d911fb0fa3
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - job
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: job
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/job-1.1.1/job-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2021-04-24T21:58:30.206439396Z"
     dependencies:
     - name: lib-k8s-as-helm
@@ -231,6 +253,26 @@ entries:
     - https://github.com/ameijer/k8s-as-helm/releases/download/job-1.0.0/job-1.0.0.tgz
     version: 1.0.0
   lib-k8s-as-helm:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-06-14T00:32:58.305926346Z"
+    description: Library chart backing portions of the k8s-as-helm project
+    digest: 8c1f5c77eb00adaa2e13987a40d13c9c93f4c1c13e68889175c7783ea79897f9
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - library
+    - k8s-as-helm
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: lib-k8s-as-helm
+    type: library
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/lib-k8s-as-helm-1.3.0/lib-k8s-as-helm-1.3.0.tgz
+    version: 1.3.0
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2021-08-19T11:46:04.058004923Z"
