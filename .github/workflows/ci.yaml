@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.7
+      - name: Add Repo
+        run: helm repo add k8s-as-helm https://ameijer.github.io/k8s-as-helm
       - name: Run chart-testing (lint)
         uses: helm/chart-testing-action@v2.0.0
         
@@ -69,7 +71,8 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.7
-          
+      - name: Add Repo
+        run: helm repo add k8s-as-helm https://ameijer.github.io/k8s-as-helm
       - name: Create kind ${{ matrix.k8s }} cluster
         uses: helm/kind-action@v1.0.0
         with:
