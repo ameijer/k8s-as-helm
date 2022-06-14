@@ -33,6 +33,8 @@ Parameter | Description | Default
 `apiVersion` | api version of k8s object | `"batch/v1"`
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to Job object | `null`
+`podAnnotations` | annotations in yaml map format to be added to the Pod object | `null`
+`podLabels` | labels to add to Pod object | `null`
 `containers` | Array of container objects in the job pods | `[]`
 `containers[].name` | The name of the given container | `null`
 `containers[].image` | The image of the given container | `null`
@@ -48,7 +50,8 @@ Parameter | Description | Default
 `activeDeadlineSeconds` | The maximum time the job may take. Leave unset to use default 600 seconds | `null`
 `parallelism` | The parallelism of the pods in the job. Leave unset to use default of no parallelism | `null`
 `completions` | The number of successful pod completions for the job. Leave unset to use the default of 1 | `null`
-`completionMode` | Set to `Indexed` to pass an index to each pod. Leave unset to omit index passing.  | `null`
+`completionMode` | Set to `Indexed` to pass an index to each pod. Leave unset to omit index passing. | `null`
+`ttlSecondsAfterFinished` | Number of seconds to delete the job after finishing | `null`
 
 ## Example Configuration
 
