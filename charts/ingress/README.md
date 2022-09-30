@@ -30,14 +30,21 @@ The following table lists the configurable parameters of the ingress chart and t
 Parameter | Description | Default
 --- | --- | ---
 `nameOverride` | override name of the chart component | .Release.Name
-`apiVersion` | api version of k8s object | `"v1"`
+`apiVersion` | api version of k8s object | `"networking.k8s.io/v1"`
+`ingressClassName` | Specify the class of the ingress | `null`
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to Ingress object | `null`
 `hosts` | yaml list representing the `host` list entries for the Ingress object | `null`
 `hosts[].url` | URL of host list entry | `null`
 `hosts[].protocol` | the protocol of the host | `http`
-`hosts[].path` | the path k8s yaml object containing the contents of the `path` field for the ingress | `null`
+`hosts[].paths` | the paths k8s yaml object containing the contents of the `paths` field for the ingress | `null`
 `tls` | the list of TLS block entries for the ingress object | `null`
+
+## Upgrade
+
+### From 1.0.x to 2.0.x
+
+When using kubernetes 1.19+, the apiVersion is now networking.k8s.io/v1, the hosts hash must be updated to use the new API.
 
 ## Example Configuration
 
