@@ -15,7 +15,9 @@ metadata:
 {{- end }}
   name: {{ template "ingress.name" . }}
 spec:
-  ingressClassName: {{ template "ingressClassName" . }}
+{{- if .Values.ingressClassName }}
+  ingressClassName: {{ .Values.ingressClassName }}
+{{- end -}}
   rules:
   {{- range .Values.hosts }}
     - host: {{ .url }}
