@@ -33,6 +33,7 @@ Parameter | Description | Default
 `apiVersion` | api version of k8s object | `"v1"`
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to Ingress object | `null`
+`ingressClassName` | IngressClass represents the class of the Ingress | `null`
 `hosts` | yaml list representing the `host` list entries for the Ingress object | `null`
 `hosts[].url` | URL of host list entry | `null`
 `hosts[].protocol` | the protocol of the host | `http`

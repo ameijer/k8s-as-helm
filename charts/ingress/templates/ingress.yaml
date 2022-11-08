@@ -15,6 +15,9 @@ metadata:
 {{- end }}
   name: {{ template "ingress.name" . }}
 spec:
+{{- if .Values.ingressClassName }}
+  ingressClassName: {{ toYaml .Values.ingressClassName }}
+{{- end }}
   rules:
   {{- range .Values.hosts }}
     - host: {{ .url }}
