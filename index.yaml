@@ -157,6 +157,24 @@ entries:
   ingress:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2022-11-08T19:08:16.896917211Z"
+    description: Helm Chart representing a single Ingress Kubernetes API object
+    digest: 3859ffce3401e77cdfdc24d2db8febb51d4a1d4b51dd808f927bfcfe4c73162e
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - ingress
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: ingress
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/ingress-1.0.3/ingress-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2021-01-17T23:30:45.424665359Z"
     description: Helm Chart representing a single Ingress Kubernetes API object
     digest: 30044d6e8fdac8be6a0cfcffd42f0492faee072c937ca6dd966dbf9b428aca88
