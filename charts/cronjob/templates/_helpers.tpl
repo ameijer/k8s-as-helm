@@ -15,3 +15,4 @@ Return the appropriate apiVersion for the object
 {{- else -}}
 {{- default "batch/v1beta1" .Values.apiVersion -}}
 {{- end -}}
+{{- end -}}
