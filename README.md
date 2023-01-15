@@ -67,6 +67,7 @@ Thanks to all the individuals who have given their time and effort towards creat
     <td align="center"><a href="https://github.com/chapipo"><img src="https://avatars.githubusercontent.com/u/8938901?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thomas Molines</b></sub></a><br /><a href="https://github.com/ameijer/k8s-as-helm/commits?author=chapipo" title="Code">💻</a></td>
   <td align="center"><a href="https://github.com/gmenuel"><img src="https://avatars.githubusercontent.com/u/22345278?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gregoire Menuel</b></sub></a><br /><a href="https://github.com/ameijer/k8s-as-helm/commits?author=gmenuel" title="Code">💻</a></td>
   <td align="center"><a href="https://github.com/edeesis"><img src="https://avatars.githubusercontent.com/u/1738038?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ed Mitchell</b></sub></a><br /><a href="https://github.com/ameijer/k8s-as-helm/commits?author=edeesis" title="Code">💻</a></td>
+  <td align="center"><a href="https://github.com/arj22"><img src="https://avatars.githubusercontent.com/u/16482322?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anudeep Reddy</b></sub></a><br /><a href="https://github.com/ameijer/k8s-as-helm/commits?author=arj22" title="Code">💻</a></td>
   </tr>
 </table>
 
