@@ -1087,4 +1087,25 @@ entries:
     urls:
     - https://github.com/ameijer/k8s-as-helm/releases/download/svc-1.0.0/svc-1.0.0.tgz
     version: 1.0.0
+  volumesnapshotclass:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2023-07-23T13:48:43.392256585Z"
+    description: Helm Chart representing a single Storage Class Kubernetes API object
+    digest: 0be90c4f759e7ca4153a89ab429fd9cab223d80d1aa679e0f57bf277673d3029
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - volumesnapshotclass
+    - snapshot
+    - class
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: volumesnapshotclass
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/volumesnapshotclass-1.0.0/volumesnapshotclass-1.0.0.tgz
+    version: 1.0.0
 generated: "2020-10-18T19:37:32.070940292Z"
