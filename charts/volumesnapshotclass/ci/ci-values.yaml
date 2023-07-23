@@ -1,0 +1,9 @@
+labels:
+  "test": "true"
+parameters:
+  testParam: "testVal"
+
+driver: "hostpath.csi.k8s.io"
+
+annotations:
+  com.k8s.as.helm.annotation: "test"

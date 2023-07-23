@@ -1,0 +1,27 @@
+apiVersion: {{ template "apiVersion" }}
+kind: VolumeSnapshotClass
+metadata:
+  labels:
+    app: {{ template "volumesnapshotclass.name" . }}
+    chart: {{ .Chart.Name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- if .Values.labels }}
+{{ toYaml .Values.labels | indent 4 }}
+{{- end }}
+  name: {{ template "volumesnapshotclass.name" . }}
+{{- if or .Values.annotations .Values.defaultClass }}
+  annotations:
+{{ toYaml .Values.annotations | indent 4}}
+{{- end }}
+{{- if .Values.defaultClass }}
+    volumesnapshotclass.kubernetes.io/is-default-class: "true"
+{{- end }}
+driver: {{ .Values.driver }}
+deletionPolicy: {{ .Values.deletionPolicy }}
+{{- if .Values.parameters }}
+parameters:
+{{- range $key, $value := .Values.parameters }}
+  {{ $key }}: {{ $value }}
+  {{- end }}
+{{- end }}
