@@ -18,10 +18,10 @@ jobs:
       - name: Add Repo
         run: helm repo add k8s-as-helm https://ameijer.github.io/k8s-as-helm
       - name: Run chart-testing (lint)
-        uses: helm/chart-testing-action@v2.0.0
+        uses: helm/chart-testing-action@v2.7.0
         
       - name: Run chart-testing (lint)
-        run: ct lint --config .github/ct-lint.yaml
+        run: strace -s 1024 -f ct  | ct lint --config .github/ct-lint.yaml 2>&1 | egrep 'execve|write|exit'
 
   kubeval-chart:
     runs-on: ubuntu-latest
