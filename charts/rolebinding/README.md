@@ -31,6 +31,7 @@ Parameter | Description | Default
 --- | --- | ---
 `nameOverride` | override name of the chart component | .Release.Name
 `apiVersion` | api version of k8s object | `"rbac.authorization.k8s.io/v1"`
+`namespace` | namespace where the RoleBinding will be created (defaults to the release namespace) | `null`
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to Secret object | `null`
 `roleRef` | object referencing a Role in the current namespace or a ClusterRole | `{}`

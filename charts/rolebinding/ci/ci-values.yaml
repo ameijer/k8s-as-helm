@@ -1,6 +1,8 @@
 labels:
   "test": "true"
 
+namespace: test-namespace
+
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   name: foo
