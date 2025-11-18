@@ -45,6 +45,8 @@ API Object | Status | Link
 `ClusterRole` | :heavy_check_mark: | [clusterrole](https://github.com/ameijer/k8s-as-helm/tree/master/charts/clusterrole)
 `ClusterRoleBinding` | :heavy_check_mark: | [clusterrolebinding](https://github.com/ameijer/k8s-as-helm/tree/master/charts/clusterrolebinding)
 `Namespace` | :heavy_check_mark: | [namespace](https://github.com/ameijer/k8s-as-helm/tree/master/charts/namespace)
+`LimitRange` | :heavy_check_mark: | [limitrange](https://github.com/ameijer/k8s-as-helm/tree/master/charts/limitrange)
+`ResourceQuota` | :heavy_check_mark: | [resourcequota](https://github.com/ameijer/k8s-as-helm/tree/master/charts/resourcequota)
 `PeristentVolume` | TODO |
 `PersistentVolumeClaim` | :heavy_check_mark: | [pvc](https://github.com/ameijer/k8s-as-helm/tree/master/charts/pvc)
 `Role` | :heavy_check_mark: | [role](https://github.com/ameijer/k8s-as-helm/tree/master/charts/role)

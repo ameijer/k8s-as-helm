@@ -1,0 +1,24 @@
+labels:
+  "test": "true"
+
+namespace: limitrange-ci
+
+limits:
+  - type: Container
+    max:
+      cpu: "1"
+      memory: 512Mi
+    min:
+      cpu: "100m"
+      memory: 128Mi
+    default:
+      cpu: "500m"
+      memory: 256Mi
+    defaultRequest:
+      cpu: "250m"
+      memory: 128Mi
+  - type: PersistentVolumeClaim
+    min:
+      storage: 1Gi
+    max:
+      storage: 10Gi

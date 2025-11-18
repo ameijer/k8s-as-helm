@@ -1,0 +1,24 @@
+apiVersion: {{ template "apiVersion" . }}
+kind: LimitRange
+metadata:
+{{- if .Values.annotations }}
+  annotations:
+{{ toYaml .Values.annotations | indent 4}}
+{{- end }}
+  labels:
+    app: {{ template "limitrange.name" . }}
+    chart: {{ .Chart.Name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- if .Values.labels }}
+{{ toYaml .Values.labels | indent 4 }}
+{{- end }}
+  name: {{ template "limitrange.name" . }}
+  namespace: {{ default .Release.Namespace .Values.namespace }}
+spec:
+  limits:
+{{- if .Values.limits }}
+{{ toYaml .Values.limits | indent 4 }}
+{{- else }}
+    []
+{{- end }}

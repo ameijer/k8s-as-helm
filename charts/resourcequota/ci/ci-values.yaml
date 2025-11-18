@@ -1,0 +1,20 @@
+labels:
+  "test": "true"
+
+namespace: resourcequota-ci
+
+hard:
+  pods: "10"
+  requests.cpu: "500m"
+  requests.memory: 1Gi
+  persistentvolumeclaims: "5"
+
+scopes:
+  - BestEffort
+
+scopeSelector:
+  matchExpressions:
+    - scopeName: PriorityClass
+      operator: In
+      values:
+        - high-priority
