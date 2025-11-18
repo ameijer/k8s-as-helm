@@ -2,8 +2,7 @@ labels:
   "test": "true"
 
 egressRules:
-  - selectors: []
-    ports:
+  - ports:
       - port: 2
         protocol: UDP
   - ports:

@@ -17,8 +17,7 @@ metadata:
 spec:
 {{- if .Values.podSelector }}
   podSelector:
-    matchLabels:
-{{ toYaml .Values.podSelector.matchLabels | indent 7 }}
+{{ toYaml .Values.podSelector | indent 4 }}
 {{- end }}
 {{- if or .Values.ingressRules .Values.egressRules }}
   policyTypes:
@@ -31,20 +30,19 @@ spec:
 {{- end }}
 {{- if .Values.egressRules }}
   egress:
-{{-  range $rule := .Values.egressRules }}
+{{- range $rule := .Values.egressRules }}
     - to:
-{{ toYaml $rule.selectors | indent 9 }}
+{{ toYaml (default (list) $rule.selectors) | indent 8 }}
       ports:
-{{ toYaml $rule.ports | indent 9 }}  
+{{ toYaml $rule.ports | indent 8 }}
 {{- end }}
 {{- end }}
 {{- if .Values.ingressRules }}
   ingress:
-{{-  range $rule := .Values.ingressRules }}
+{{- range $rule := .Values.ingressRules }}
     - from:
-{{ toYaml $rule.selectors | indent 7 }}
+{{ toYaml (default (list) $rule.selectors) | indent 8 }}
       ports:
-{{ toYaml $rule.ports | indent 9 }}  
+{{ toYaml $rule.ports | indent 8 }}
 {{- end }}
 {{- end }}
-

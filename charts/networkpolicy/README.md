@@ -36,9 +36,9 @@ Parameter | Description | Default
 `podSelector.matchLabels` | Map of key/value pairs to be used to select pods with matching labels to apply Network Policy to | `null`
 `egressRules` | array of egress rules to apply to matching pods. | `[]`
 `ingressRules` | array of ingress rules to apply to matching pods. | `[]`
-`ingressRules[].selectors` | array of network policy ingress traffic selector statements | `[]`
+`ingressRules[].selectors` | array of network policy ingress traffic selector statements (defaults to `[]` when omitted) | `[]`
 `ingressRules[].ports` | array of port specifications to apply the ingress rule on | `[]`
-`egressRules[].selectors` | array of network policy egress traffic selector statements | `[]`
+`egressRules[].selectors` | array of network policy egress traffic selector statements (defaults to `[]` when omitted) | `[]`
 `egressRules[].ports` | array of port specifications to apply the egress rule on | `[]`
 
 ## Example Configuration
