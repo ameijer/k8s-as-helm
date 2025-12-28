@@ -15,6 +15,7 @@ Helm charts are great! They are really configurable and let you build complicate
 Let's say, though, you want to add additional code to a third party helm chart. You could make a new chart with your K8s API resource and the third party chart as a dependency, but that requires maintenance which might not be worth it if you only needed a single additional resource created. That's where k8s-as-helm charts come in. These charts wrap a single Kubernetes resource in a helm chart with all the key parameters exposed.
 
 The rolebinding chart deploys a single Kubernetes RoleBinding object.
+The RoleBinding is created in the Helm release namespace (the rendered manifest includes `metadata.namespace`).
 
 ## Installation
 
