@@ -1,3 +1,4 @@
+apiVersion: networking.k8s.io/v1
 labels:
   "test": "true"
 
@@ -5,9 +6,12 @@ hosts:
   - url: test.url.local
     paths:
       - path: /test
+        pathType: Prefix
         backend:
-          serviceName: test-svc
-          servicePort: 443
+          service:
+            name: test-svc
+            port:
+              number: 443
 tls:
   - hosts:
       - test.url.local
