@@ -34,6 +34,7 @@ Parameter | Description | Default
 `ingressClassName` | Specify the class of the ingress | `null`
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to Ingress object | `null`
+`ingressClassName` | IngressClass represents the class of the Ingress | `null`
 `hosts` | yaml list representing the `host` list entries for the Ingress object | `null`
 `hosts[].url` | URL of host list entry | `null`
 `hosts[].protocol` | the protocol of the host | `http`

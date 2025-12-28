@@ -21,3 +21,9 @@ backoffLimit: 7
 completions: 7
 parallelism: 2
 activeDeadlineSeconds: 601
+ttlSecondsAfterFinished: 60
+
+podAnnotations:
+  test: "true"
+podLabels:
+  test: "true"
