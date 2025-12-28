@@ -131,6 +131,30 @@ entries:
     version: 1.0.0
   cronjob:
   - apiVersion: v2
+    appVersion: v1.0.2
+    created: "2025-12-28T17:45:52.451088154Z"
+    dependencies:
+    - name: lib-k8s-as-helm
+      repository: https://ameijer.github.io/k8s-as-helm
+      version: 1.3.0
+    description: Helm Chart representing a single CronJob Kubernetes API object
+    digest: d5b674c3df9d664317671990a1228177ba7f2b8ff0e93abf014e4107160e317f
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - cronjob
+    - cron
+    - job
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: cronjob
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/cronjob-1.0.2/cronjob-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
     appVersion: v1.0.1
     created: "2022-12-15T19:43:45.62364766Z"
     dependencies:
@@ -179,6 +203,24 @@ entries:
     - https://github.com/ameijer/k8s-as-helm/releases/download/cronjob-1.0.0/cronjob-1.0.0.tgz
     version: 1.0.0
   ingress:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2025-12-28T17:45:52.73600315Z"
+    description: Helm Chart representing a single Ingress Kubernetes API object
+    digest: 598966f3a71c8dc356dae7880aa34ed0c147eabc7abcff75a1aa45d96d2afe1e
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - ingress
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: ingress
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/ingress-1.1.0/ingress-1.1.0.tgz
+    version: 1.1.0
   - apiVersion: v2
     appVersion: v1.0.0
     created: "2022-11-08T19:08:16.896917211Z"
