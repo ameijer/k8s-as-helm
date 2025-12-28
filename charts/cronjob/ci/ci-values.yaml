@@ -16,7 +16,7 @@ extraSettings:
   securityContext:
     runAsNonRoot: true
     runAsUser: 1000
-
+concurrencyPolicy: Forbid
 backoffLimit: 7
 completions: 7
 parallelism: 2
