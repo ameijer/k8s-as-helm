@@ -1,0 +1,17 @@
+annotations:
+  test: "true"
+labels:
+  extra: label
+
+hard:
+  pods: "10"
+
+scopes:
+  - NotTerminating
+
+scopeSelector:
+  matchExpressions:
+    - scopeName: PriorityClass
+      operator: In
+      values:
+        - high

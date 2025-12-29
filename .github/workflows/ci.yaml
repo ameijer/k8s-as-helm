@@ -28,6 +28,28 @@ jobs:
       - name: Run chart-testing (lint)
         run: ct lint --config .github/ct-lint.yaml --target-branch master
 
+      - name: Install helm-unittest plugin
+        run: helm plugin install https://github.com/helm-unittest/helm-unittest --version v0.6.3
+
+      - name: Run helm-unittest (changed charts only)
+        run: |
+          set -euo pipefail
+          changed="$(ct list-changed --config .github/ct.yaml --target-branch master || true)"
+          if [[ -z "${changed}" ]]; then
+            echo "No chart changes detected"
+            exit 0
+          fi
+          for chart in ${changed}; do
+            if [[ "${chart}" == "lib-k8s-as-helm" ]]; then
+              continue
+            fi
+            if compgen -G "charts/${chart}/tests/*.yaml" > /dev/null; then
+              helm unittest "charts/${chart}"
+            else
+              echo "Skipping helm-unittest for charts/${chart} (no tests)"
+            fi
+          done
+
   kubeval-chart:
     runs-on: ubuntu-latest
     needs:

@@ -1,0 +1,9 @@
+apiVersion: "v1"
+
+nameOverride: null
+
+annotations: null
+labels: null
+
+# (REQUIRED) LimitRange spec.limits list. See Kubernetes LimitRange documentation.
+limits: []
