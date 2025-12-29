@@ -1,4 +1,4 @@
-apiVersion: {{ template "apiVersion" }}
+apiVersion: {{ template "apiVersion" . }}
 kind: Service
 metadata:
 {{- if .Values.annotations }}

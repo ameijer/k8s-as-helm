@@ -1,4 +1,4 @@
-apiVersion: {{ template "apiVersion" }}
+apiVersion: {{ template "apiVersion" . }}
 kind: StorageClass
 metadata:
   labels:
