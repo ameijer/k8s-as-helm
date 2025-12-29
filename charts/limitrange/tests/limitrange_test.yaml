@@ -1,0 +1,45 @@
+suite: limitrange
+templates:
+  - templates/limitrange.yaml
+tests:
+  - it: should render a LimitRange with limits
+    values:
+      - values/basic.yaml
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: LimitRange
+      - equal:
+          path: apiVersion
+          value: v1
+      - equal:
+          path: metadata.name
+          value: RELEASE-NAME
+      - equal:
+          path: spec.limits
+          value:
+            - type: Container
+              default:
+                cpu: 500m
+                memory: 512Mi
+
+  - it: should omit annotations when unset
+    set:
+      limits[0].type: Container
+    asserts:
+      - notExists:
+          path: metadata.annotations
+
+  - it: should include annotations and labels when set
+    set:
+      annotations.test: "true"
+      labels.extra: "label"
+      limits[0].type: Container
+    asserts:
+      - equal:
+          path: metadata.annotations.test
+          value: "true"
+      - equal:
+          path: metadata.labels.extra
+          value: label
