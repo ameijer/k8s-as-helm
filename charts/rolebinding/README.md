@@ -31,6 +31,7 @@ The following table lists the configurable parameters of the rolebinding chart a
 Parameter | Description | Default
 --- | --- | ---
 `nameOverride` | override name of the chart component | .Release.Name
+`namespaceOverride` | override namespace for the RoleBinding | `""` (defaults to `.Release.Namespace`)
 `apiVersion` | api version of k8s object | `"rbac.authorization.k8s.io/v1"`
 `annotations` | annotations in yaml map format to be added to the object | `null`
 `labels` | labels to add to Secret object | `null`

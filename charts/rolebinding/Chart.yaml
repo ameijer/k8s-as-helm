@@ -3,7 +3,7 @@ appVersion: "v1.0.0"
 home: https://github.com/ameijer/k8s-as-helm
 description: Helm Chart representing a single RoleBinding Kubernetes API object
 name: rolebinding
-version: 1.0.1
+version: 1.0.2
 icon: https://ameijer.github.io/k8s-as-helm/icon.png
 dependencies:
 - name: lib-k8s-as-helm
