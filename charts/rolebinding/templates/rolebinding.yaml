@@ -14,5 +14,6 @@ metadata:
 {{ toYaml .Values.labels | indent 4 }}
 {{- end }}
   name: {{ template "rolebinding.name" . }}
+  namespace: {{ include "rolebinding.namespace" . }}
 {{ tpl ( include "k8s-as-helm-lib.rolebinding.roleref.tpl" .Values.roleRef) . }}
 {{ tpl ( include "k8s-as-helm-lib.rolebinding.subjects.tpl" .Values.subjects) . }}
