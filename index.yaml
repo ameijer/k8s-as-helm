@@ -903,6 +903,28 @@ entries:
   rolebinding:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2025-12-29T01:27:40.760705033Z"
+    dependencies:
+    - name: lib-k8s-as-helm
+      repository: file://../lib-k8s-as-helm
+      version: 1.3.0
+    description: Helm Chart representing a single RoleBinding Kubernetes API object
+    digest: 457e5e78855e99c407c6853f200e02a0a31922a63adab415baa1fab41769bcbf
+    home: https://github.com/ameijer/k8s-as-helm
+    icon: https://ameijer.github.io/k8s-as-helm/icon.png
+    keywords:
+    - rolebinding
+    - api
+    - primitives
+    maintainers:
+    - name: ameijer
+      url: https://github.com/ameijer
+    name: rolebinding
+    urls:
+    - https://github.com/ameijer/k8s-as-helm/releases/download/rolebinding-1.0.2/rolebinding-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2021-08-19T11:46:04.235807815Z"
     dependencies:
     - name: lib-k8s-as-helm
