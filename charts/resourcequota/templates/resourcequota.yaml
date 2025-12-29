@@ -1,0 +1,32 @@
+apiVersion: {{ template "apiVersion" . }}
+kind: ResourceQuota
+metadata:
+{{- if .Values.annotations }}
+  annotations:
+{{ toYaml .Values.annotations | indent 4}}
+{{- end }}
+  labels:
+    app: {{ template "resourcequota.name" . }}
+    chart: {{ .Chart.Name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- if .Values.labels }}
+{{ toYaml .Values.labels | indent 4 }}
+{{- end }}
+  name: {{ template "resourcequota.name" . }}
+spec:
+{{- if .Values.hard }}
+  hard:
+{{ toYaml .Values.hard | indent 4 }}
+{{- end }}
+{{- if .Values.scopes }}
+  scopes:
+{{ toYaml .Values.scopes | indent 4 }}
+{{- end }}
+{{- if .Values.scopeSelector }}
+  scopeSelector:
+{{- if .Values.scopeSelector.matchExpressions }}
+    matchExpressions:
+{{ toYaml .Values.scopeSelector.matchExpressions | indent 6 }}
+{{- end }}
+{{- end }}

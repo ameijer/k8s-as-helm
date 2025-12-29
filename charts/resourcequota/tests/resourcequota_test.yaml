@@ -1,0 +1,52 @@
+suite: resourcequota
+templates:
+  - templates/resourcequota.yaml
+tests:
+  - it: should render a ResourceQuota with defaults
+    set:
+      hard.pods: "10"
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: ResourceQuota
+      - equal:
+          path: apiVersion
+          value: v1
+      - equal:
+          path: metadata.name
+          value: RELEASE-NAME
+      - exists:
+          path: spec.hard.pods
+
+  - it: should omit optional metadata when unset
+    set:
+      hard.pods: "10"
+    asserts:
+      - notExists:
+          path: metadata.annotations
+      - notExists:
+          path: spec.scopes
+      - notExists:
+          path: spec.scopeSelector
+
+  - it: should include labels, annotations, scopes, and scopeSelector when set
+    values:
+      - values/full.yaml
+    asserts:
+      - equal:
+          path: metadata.annotations.test
+          value: "true"
+      - equal:
+          path: metadata.labels.extra
+          value: label
+      - equal:
+          path: spec.scopes[0]
+          value: NotTerminating
+      - equal:
+          path: spec.scopeSelector.matchExpressions
+          value:
+            - scopeName: PriorityClass
+              operator: In
+              values:
+                - high
