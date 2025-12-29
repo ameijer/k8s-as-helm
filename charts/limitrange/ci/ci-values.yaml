@@ -1,0 +1,26 @@
+annotations:
+  example.com/annotation: "true"
+labels:
+  test: "true"
+  ci: "true"
+
+limits:
+  - type: Container
+    default:
+      cpu: 500m
+      memory: 512Mi
+    defaultRequest:
+      cpu: 200m
+      memory: 256Mi
+    max:
+      cpu: "1"
+      memory: 1Gi
+    min:
+      cpu: 100m
+      memory: 128Mi
+    maxLimitRequestRatio:
+      cpu: "10"
+  - type: Pod
+    max:
+      cpu: "2"
+      memory: 2Gi

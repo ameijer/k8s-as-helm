@@ -1,0 +1,22 @@
+annotations:
+  example.com/annotation: "true"
+labels:
+  test: "true"
+  ci: "true"
+
+hard:
+  pods: "10"
+  requests.cpu: "4"
+  requests.memory: 8Gi
+  limits.cpu: "8"
+  limits.memory: 16Gi
+
+scopes:
+  - NotTerminating
+
+scopeSelector:
+  matchExpressions:
+    - scopeName: PriorityClass
+      operator: In
+      values:
+        - high

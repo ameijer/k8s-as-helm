@@ -1,0 +1,2 @@
+
+The LimitRange Chart {{ .Release.Name }} has been installed into your cluster!

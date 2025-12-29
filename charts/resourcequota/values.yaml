@@ -1,0 +1,15 @@
+apiVersion: "v1"
+
+nameOverride: null
+
+annotations: null
+labels: null
+
+# (REQUIRED) ResourceQuota hard limits. See Kubernetes ResourceQuota documentation.
+hard: null
+
+# Optional scopes (e.g. NotTerminating, BestEffort, NotBestEffort, Terminating).
+scopes: []
+
+# Optional scopeSelector. See Kubernetes ResourceQuota documentation.
+scopeSelector: null
