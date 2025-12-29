@@ -51,6 +51,8 @@ API Object | Status | Link
 `RoleBinding` | :heavy_check_mark: | [rolebinding](https://github.com/ameijer/k8s-as-helm/tree/master/charts/rolebinding)
 `ServiceAccount` | :heavy_check_mark: | [serviceaccount](https://github.com/ameijer/k8s-as-helm/tree/master/charts/serviceaccount)
 `NetworkPolicy` | :heavy_check_mark: | [networkpolicy](https://github.com/ameijer/k8s-as-helm/tree/master/charts/networkpolicy)
+`ResourceQuota` | :heavy_check_mark: | [resourcequota](https://github.com/ameijer/k8s-as-helm/tree/master/charts/resourcequota)
+`LimitRange` | :heavy_check_mark: | [limitrange](https://github.com/ameijer/k8s-as-helm/tree/master/charts/limitrange)
 
 ## Contributing
 
